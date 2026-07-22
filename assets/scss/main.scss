@@ -1,23 +1,59 @@
+// GUIDA
 // =================
-// BODY
-$colore-pricipale:rgb(192, 220, 233);
+$background:rgb(192, 220, 233);
+$text-color: #333;
+$border-color: rgb(79,79,79);
+$font-main: Arial, Helvetica, sans-serif;
+
 
 body{
-    background-color: $colore-pricipale;
+    background-color: $background;
+    font-family: $font-main;
+
+    
 }
 
 
-// =================
+
 
 
 // =================
 // HEADER
 // =================
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: $background;
+    font-family: $font-main;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    border: 1px solid $border-color;
+}
+
+.profilo-img{
+    border-radius: 1px solid $border-color;
+    background-color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+
 
 // =================
 // HERO
 // =================
+
+main {
+    padding-top: 120px;
+}
 
 
 // =================
