@@ -1,32 +1,17 @@
-body {
-  background-color: rgb(192, 220, 233);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 11 |     font-family: $font-maingit;
+ *    |                  ^^^^^^^^^^^^^
+ *    '
+ *   assets\scss\main.scss 11:18  root stylesheet */
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb(192, 220, 233);
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
-  display: flex;
-  justify-content: start;
-  border: 1px solid rgb(79, 79, 79);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 11 \2502      font-family: $font-maingit;\d\a    \2502                   ^^^^^^^^^^^^^\a    \2575 \a   assets\\scss\\main.scss 11:18  root stylesheet";
 }
-
-.profilo-img {
-  border-radius: 1px solid rgb(79, 79, 79);
-  background-color: black;
-}
-
-ul {
-  list-style: none;
-}
-
-main {
-  padding-top: 120px;
-}
-
-/*# sourceMappingURL=style.css.map */
