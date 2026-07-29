@@ -1,49 +1,80 @@
-// GUIDA
-// =================
-$background:rgb(192, 220, 233);
-$text-color: #333;
-$border-color: rgb(79,79,79);
-$font-main: Arial, Helvetica, sans-serif;
+@import 'config';
+@import 'responsive';
+
+//  sass assets/scss/main.scss assets/css/style.css --watch
 
 
 body{
-    background-color: $background;
-    font-family: $font-maingit;
-
-    
+    background: $primary-color;
+    height: 100vh;
+    font-family: $font-main;
+    line-height: 1;
+    color: set-text-color($primary-color);
 }
 
+h1,h2,h3 {
+    font-weight: 400;
+}
 
+.container{
+    // display:flex;
+    // justify-content:space-between;
+    // align-items:center;
+    // border: 1px solid red;
+    // padding:20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+        border-bottom: 1px solid red ;
 
-
+}
 
 // =================
 // HEADER
 // =================
-
-header{
+.header{
     position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    background-color: $background;
-    font-family: $font-main;
-    padding: 20px;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: $primary-color;
+.container{
     display: flex;
-    justify-content: start;
-    border: 1px solid $border-color;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+
+}
+
+}
+
+.main{
+
+    .container{
+        
+    }
 }
 
 .profilo-img{
-    border-radius: 1px solid $border-color;
-    background-color: black;
-}
+    box-sizing: border-box;
+ }
+
+ a {
+    text-decoration: none;
+    color: set-text-color($primary-color);
+ }
 
 ul{
     list-style: none;
-}
+    margin: 0;
+    padding: 0;
+    }
+
+
+
+
+
 
 
 
@@ -59,3 +90,5 @@ main {
 // =================
 // FOOTER
 // =================
+
+
