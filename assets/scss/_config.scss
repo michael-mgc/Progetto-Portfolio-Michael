@@ -1,7 +1,16 @@
-$primary-color:rgb(232, 252, 252);
-$secondary-color: #fffcfc;
+$primary-color: #fff;
+$secondary-color: #000;
 $border-color: rgb(79,79,79);
 $font-main: Arial, Helvetica, sans-serif;
+
+$header-height: 80px;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 @function set-text-color($color) {
     @if (lightness($color) > 40%){

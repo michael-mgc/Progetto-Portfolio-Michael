@@ -1,12 +1,13 @@
 @import 'config';
 @import 'responsive';
+@import 'menu';
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
-
 
 body{
     background: $primary-color;
     height: 100vh;
+    width: 100%;
     font-family: $font-main;
     line-height: 1;
     color: set-text-color($primary-color);
@@ -16,53 +17,23 @@ h1,h2,h3 {
     font-weight: 400;
 }
 
-.container{
-    // display:flex;
-    // justify-content:space-between;
-    // align-items:center;
-    // border: 1px solid red;
-    // padding:20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-        border-bottom: 1px solid red ;
 
-}
-
-// =================
-// HEADER
-// =================
-.header{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background-color: $primary-color;
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-
-}
-
-}
-
-.main{
-
-    .container{
-        
-    }
-}
-
-.profilo-img{
-    box-sizing: border-box;
- }
 
  a {
     text-decoration: none;
     color: set-text-color($primary-color);
+ }
+
+ .header{
+    padding: 1rem;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    height: $header-height;
+    border-bottom: 1px solid darkgrey;
  }
 
 ul{
@@ -71,24 +42,18 @@ ul{
     padding: 0;
     }
 
-
-
-
-
-
-
-
-// =================
-// HERO
-// =================
-
-main {
-    padding-top: 120px;
+.main{
+    padding-top: $header-height;
+   background: blue;
+   height: 100vh;
 }
 
 
-// =================
-// FOOTER
-// =================
+
+
+
+
+
+
 
 
