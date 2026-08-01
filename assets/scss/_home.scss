@@ -1,6 +1,6 @@
 .section-home {
     // padding:20px ;
-    height: 100vh;
+    // height: 100vh;
     // overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -10,17 +10,16 @@
     padding: 20px;
 
     &__name{
-        height: 50%;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-bottom: 1px solid black;
     }
     &__bio{
-        height: 50%;
-        display: flex;
-        flex-direction: column; 
-        justify-content: flex-start; 
+        // display: flex;
+        // flex-direction: column; 
+        // justify-content: flex-start; 
         margin: 40px 0;
     }
 

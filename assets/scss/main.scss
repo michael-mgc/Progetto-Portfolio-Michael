@@ -2,6 +2,7 @@
 @import 'responsive';
 @import 'menu';
 @import 'home';
+@import 'about';
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
 
@@ -21,12 +22,14 @@ h1,h2 {
 h3{
         font-weight: map-get($font-weights, small);
         font-size: 1em;
+        color: $accent-color;
     }
 
     p{
-          font-weight: map-get($font-weights, small);
+        font-weight: map-get($font-weights, small);
         font-size: 1em;
         padding-bottom: 20px;
+        color: $accent-color;
     }
 
 
@@ -61,7 +64,7 @@ ul{
 
 .main{
    padding-top: $header-height;
-   height: 100vh;
+//    height: 100vh;
 //    padding-right: 20px;
 //    padding-left: 20px;
 }
