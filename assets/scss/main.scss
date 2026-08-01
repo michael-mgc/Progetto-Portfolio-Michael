@@ -1,6 +1,7 @@
 @import 'config';
 @import 'responsive';
 @import 'menu';
+@import 'home';
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
 
@@ -9,13 +10,27 @@ body{
     height: 100vh;
     width: 100%;
     font-family: $font-main;
-    line-height: 1;
+    line-height: 2;
     color: set-text-color($primary-color);
 }
 
-h1,h2,h3 {
-    font-weight: 400;
+h1,h2 {
+    font-weight: map-get($font-weights, bold);
+    font-size: 2em;
 }
+h3{
+        font-weight: map-get($font-weights, small);
+        font-size: 1em;
+    }
+
+    p{
+          font-weight: map-get($font-weights, small);
+        font-size: 1em;
+        padding-bottom: 20px;
+    }
+
+
+
 
 
 
@@ -34,6 +49,8 @@ h1,h2,h3 {
     box-sizing: border-box;
     height: $header-height;
     border-bottom: 1px solid darkgrey;
+    background: $primary-color;
+
  }
 
 ul{
@@ -43,12 +60,25 @@ ul{
     }
 
 .main{
-    padding-top: $header-height;
-   background: blue;
+   padding-top: $header-height;
    height: 100vh;
+//    padding-right: 20px;
+//    padding-left: 20px;
 }
 
+.footer{
+    height: 20vh;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
 
+.social-icons {
+        font-size: 2rem;
+}
 
 
 
