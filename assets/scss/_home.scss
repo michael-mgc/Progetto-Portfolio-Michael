@@ -1,26 +1,28 @@
 .section-home {
-    // padding:20px ;
-    // height: 100vh;
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    // text-align: center;
-    // background-size: cover;
+    border-bottom: 1px solid black;
     padding: 20px;
 
-    &__name{
+    &__me{
         height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-bottom: 1px solid black;
-    }
-    &__bio{
-        // display: flex;
-        // flex-direction: column; 
-        // justify-content: flex-start; 
-        margin: 40px 0;
+       
+        h1{
+            font-size: 36px;
+            margin: 10px 0 0;
+        }
+        h3{
+            font-size: 14px;
+        }
+        p{
+            margin: 2em 0 0;
+        }
+
+
     }
 
 }
