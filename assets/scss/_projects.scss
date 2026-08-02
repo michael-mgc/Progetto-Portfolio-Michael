@@ -1,13 +1,46 @@
-#section-projects{
+#projects{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 20px;
     border-bottom: 1px solid black;
+    padding-top: $padding-header-nav;
 
 }
 
-.section-projects__container {
-margin: 40px 0;
-// background-color: red;
+.projects{
+    // margin: auto;
+
+&__container {
+    padding: 0 20px;
+    height: auto;
+    // margin: auto;
+}
+
+&__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+&__card{
+    background-color: white;
+    margin: 50px 50px;
+    width: 18rem;
+    height: auto;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    box-shadow: inset;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    .projects__img{
+        background-color: aquamarine;
+        height: 7rem;
+        width: 100%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+    }
+.projects__body{
+    padding: 10px 10px;
+}
+ }
+
 }

@@ -26,13 +26,13 @@
     <nav class="nav">
         <ul class="menu-nav">
             <li class="menu-nav__item active">
-                <a href="index.html" class="menu-nav__link">Home</a>
+                <a href="#home" class="menu-nav__link">Home</a>
                 </li>
             <li class="menu-nav__item">
-                <a href="index.html" class="menu-nav__link">About Me</a>
+                <a href="#about" class="menu-nav__link">About Me</a>
                 </li>
             <li class="menu-nav__item">
-                <a href="index.html" class="menu-nav__link">Proggetti</a>
+                <a href="#projects" class="menu-nav__link">Proggetti</a>
                 </li>
             <li class="menu-nav__item">
                 <a href="index.html" class="menu-nav__link">Contatti</a>
@@ -43,8 +43,8 @@
     </header>
 
     <main class="main">
-        <section class="section-home">
-        <div class="section-home__me">
+        <section id="home">
+        <div class="home__container">
         <h3>Junior Web Developer</h3>
         <h1>Michael Soto</h1>
                 <p>Sviluppo interfacce web moderne e responsive
@@ -55,10 +55,10 @@
 
         </section>
 
-        <section class="section-about">
-        <div class="section-about__conteiner">
+        <section id="about">
+        <div class="about__container">
 
-            <h2>Chi Sono...</h2>
+            <h2>Chi Sono</h2>
 
             <p>Mi chiamo Michael e sto costruendo il mio percorso nel mondo dello sviluppo web. Attualmente lavoro nella grande distribuzione, ma nel tempo libero studio programmazione e realizzo progetti per migliorare le mie competenze.
                 </p>            
@@ -78,15 +78,32 @@
         </div>
         </section>
 
-        <section id="section-projects">
-            <div class="section-projects__container">
+        <section id="projects" class="projects">
+            <div class="projects__container">
                 <h2>I miei proggetti</h2>
-                <div class="section-projects__projects">
-                    <div class="section-projects__project1">
-                        Portfolio
-                    </div>
-                    <div class="section-projects__project2">
-                        Contatore Js
+                <div class="projects__list">
+                        <div class="projects__card">
+                            <div class ="projects__img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="projects__body">
+                                <h3>Porfolio Personale</h3>
+                                    <p>
+                                        Il mio portfolio personale, realizzato con HTML, SCSS e JavaScript, con un design moderno e responsive.
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="projects__card">
+                            <div class ="projects__img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="projects__body">
+                                <h3>Contatore JavaScript</h3>
+                                    <p>
+                                        Esercizio pratico per approfondire il DOM, gli eventi e la manipolazione degli elementi con JavaScript.
+                                    </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
