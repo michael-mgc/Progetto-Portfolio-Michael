@@ -4,13 +4,12 @@
 @import 'home';
 @import 'about';
 @import 'projects';
+@import 'contacts';
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
 
 body{
     background: $primary-color;
-    height: 100vh;
-    width: 100%;
     font-family: $font-main;
     line-height: 2;
     color: set-text-color($primary-color);
@@ -39,7 +38,8 @@ h3{
 
  .header{
     padding: 1rem;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -53,30 +53,15 @@ h3{
 
  }
 
+
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
     }
 
-.main{
-   padding-top: $header-height;
 
-}
 
-.footer{
-    height: 20vh;
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-.social-icons {
-        font-size: 2rem;
-}
 
 
 

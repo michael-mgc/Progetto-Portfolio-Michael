@@ -3,24 +3,16 @@
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: 1px solid black;
-    padding-top: $padding-header-nav;
 
 }
 
 .projects{
 
 &__container {
-    padding: 0 20px;
     height: auto;
-    // margin: auto;
 }
 
 &__list{
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-
-    // width: 60vw;
     margin: 2rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;

@@ -1,5 +1,4 @@
 #about{
-    padding-top: $padding-header-nav;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -8,8 +7,6 @@
 }
 .about__container{
         height: auto;
-        padding: 0 20px;
-
         p{
             margin: 2em 0 0;
         }
