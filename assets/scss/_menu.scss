@@ -46,7 +46,7 @@
     top: 0;    /* promemoria per l'altezza della tendina */
     left: 0;
     width: 100vw;
-    visibility: hidden;
+    visibility: hidden;    
 
 
 
@@ -66,12 +66,13 @@
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
-        border-bottom: 1px solid darkgrey;
-        @include transition-ease;
-        
+        @include transition-ease;        
 
         &.open {
             transform: translateY(0);
+            border-bottom: 1px solid darkgrey;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
         }
 
         &__item{

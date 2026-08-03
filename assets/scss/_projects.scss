@@ -8,7 +8,6 @@
 }
 
 .projects{
-    // margin: auto;
 
 &__container {
     padding: 0 20px;
@@ -17,30 +16,95 @@
 }
 
 &__list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+
+    // width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
 }
+
 &__card{
     background-color: white;
-    margin: 50px 50px;
+    margin: auto;
     width: 18rem;
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    box-shadow: inset;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-    .projects__img{
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+&__img{
         background-color: aquamarine;
-        height: 7rem;
+        height: 10rem;
         width: 100%;
         border-top-left-radius: 5%;
         border-top-right-radius: 5%;
+        border-bottom: 1px solid $secondary-color;
+        position: relative;
+        overflow: hidden;
+
+
+        img{
+            width: 100%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: $secondary-color;
+            opacity: 0;
+            @include transition-ease
+
+        }
+
+        &:hover{
+            &::after{
+                top: 0;
+                opacity: 0.9;
+            }
+             .projects__btn{     // IMPORTANT: the hover effect starts here for &__btn
+                 opacity: 1;
+                }
+
+        }
+
     }
-.projects__body{
+
+&__btns{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+&__btn{
+    opacity: 0;
+    color: set-text-color($secondary-color);
+    @include transition-ease;
+
+            &:hover {
+        color: set-text-color(set-text-color($secondary-color));
+    }
+}
+
+&__body{
     padding: 10px 10px;
 }
  }
 
-}

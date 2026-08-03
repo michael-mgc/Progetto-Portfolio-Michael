@@ -65,11 +65,12 @@
   list-style-type: none;
   padding-right: 1rem;
   transform: translateY(-100%);
-  border-bottom: 1px solid darkgrey;
   transition: all 0.5s ease-in-out;
 }
 .nav .menu-nav.open {
   transform: translateY(0);
+  border-bottom: 1px solid darkgrey;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .nav .menu-nav__item {
   transform: translateX(100vw);
@@ -175,28 +176,73 @@
   height: auto;
 }
 .projects__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
 }
 .projects__card {
   background-color: white;
-  margin: 50px 50px;
+  margin: auto;
   width: 18rem;
   height: auto;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
-  box-shadow: inset;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
 }
-.projects__card .projects__img {
+.projects__img {
   background-color: aquamarine;
-  height: 7rem;
+  height: 10rem;
   width: 100%;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+  border-bottom: 1px solid #000;
+  position: relative;
+  overflow: hidden;
 }
-.projects__card .projects__body {
+.projects__img img {
+  width: 100%;
+}
+.projects__img::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.projects__img:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+.projects__img:hover .projects__btn {
+  opacity: 1;
+}
+.projects__btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.projects__btn {
+  opacity: 0;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.projects__btn:hover {
+  color: #000;
+}
+.projects__body {
   padding: 10px 10px;
 }
 
@@ -241,6 +287,7 @@ a {
   height: 80px;
   background: #fff;
   border-bottom: 1px solid darkgrey;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 ul {

@@ -1,14 +1,21 @@
+@use "sass:color";
+@use "sass:map";
+
 $primary-color: #fff;
 $secondary-color: #000;
 $accent-color: oklch(44.2% .017 285.786);
 $border-color: rgb(79,79,79);
 $font-main: Arial, Helvetica, sans-serif;
 $font-weights: (
-    "small" : 400,
-    "medium" : 500,
-    "bold": 700
+    small : 400,
+    medium : 500,
+    bold: 700
     );
+   
 
+
+
+    // Height of nav 
 $header-height: 80px;
 $padding-header-nav: 160px;
 
@@ -20,8 +27,12 @@ $padding-header-nav: 160px;
     padding: 0;
 }
 
+
+
+
+
 @function set-text-color($color) {
-    @if (lightness($color) > 40%){
+    @if (color.channel($color, "lightness", $space: hsl) > 40%) {
         @return #000;
     } @else {
         @return #fff;
