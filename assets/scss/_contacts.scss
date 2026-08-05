@@ -1,31 +1,61 @@
 #contacts{
-    scroll-margin-top: 80px;
-  padding: 5rem 1.5rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
 }
-.footer{
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
+.contacts {
+    
 
-    h5, h4{
-        margin-top: $spacing-sm;
+
+    &__container {
+        // display: flex;
+        // flex-direction: column;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
     }
-}
 
+    &__list{
+    
+    margin-top: $spacing-md;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    }
 
-
-.social-icons {
-        font-size: 2rem;
-        border-bottom: 1px solid $primary-color;
+    &__item{
         display: flex;
-        justify-content: center;
-        padding: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
 
+        h6{
+            color: $accent-color;
+            @include transition-ease;
+
+             &:hover {
+        color: set-text-color(set-text-color($secondary-color));
+             }
+            }
+        }
+
+        &__social{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+
+            span{
+                font-size: 1rem;
+            }
+        }
+
+    
 }
-        
+
 

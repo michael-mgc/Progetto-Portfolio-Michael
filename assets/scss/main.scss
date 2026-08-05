@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @import 'config';
 @import 'responsive';
 @import 'menu';
@@ -5,6 +7,7 @@
 @import 'about';
 @import 'projects';
 @import 'contacts';
+
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
 
@@ -16,16 +19,16 @@ body{
 }
 
 h1,h2 {
-    font-weight: map-get($font-weights, bold);
+    font-weight: map.get($font-weights, bold);
     font-size: 2em;
 }
 h3{
-        font-weight: map-get($font-weights, small);
+        font-weight: map.get($font-weights, small);
         color: $accent-color;
     }
 
     p{
-        font-weight: map-get($font-weights, small);
+        font-weight: map.get($font-weights, small);
         font-size: 16px;
         color: $accent-color;
     }
@@ -60,6 +63,37 @@ ul{
     padding: 0;
     }
 
+// === Footer ===
+#footer{
+    scroll-margin-top: 80px;
+  padding: 5rem 1.5rem;
+}
+.footer{
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+
+    h5, h4{
+        margin-top: $spacing-sm;
+    }
+}
+
+
+
+.social-icons {
+        font-size: 2rem;
+        border-bottom: 1px solid $primary-color;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+
+}
+        
 
 
 
