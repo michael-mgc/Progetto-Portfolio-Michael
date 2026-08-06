@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-section {
-  scroll-margin-top: 80px;
-  padding: 5rem 1.5rem;
-}
-
 .menu-btn {
   position: absolute;
   z-index: 1;
@@ -150,6 +145,7 @@ section {
 .items .item img {
   height: 50px;
   margin-bottom: 1em;
+  transition: filter 0.5s ease;
   filter: grayscale(100%);
 }
 .items .item span {
@@ -157,10 +153,10 @@ section {
   visibility: hidden;
   transition: opacity 0.5s ease;
 }
-.items .item.active img {
+.items .item:hover img {
   filter: grayscale(0%);
 }
-.items .item.active span {
+.items .item:hover span {
   opacity: 1;
   visibility: visible;
 }
@@ -192,8 +188,15 @@ section {
   overflow: hidden;
   cursor: pointer;
 }
+.projects__card:hover .projects__img::after {
+  top: 0;
+  opacity: 0.9;
+}
+.projects__card:hover .projects__btn {
+  opacity: 1;
+}
 .projects__img {
-  background-color: aquamarine;
+  background-color: black;
   height: 10rem;
   width: 100%;
   border-top-left-radius: 5%;
@@ -204,6 +207,12 @@ section {
 }
 .projects__img img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 2s ease;
+}
+.projects__img:hover img {
+  transform: translateY(-40%);
 }
 .projects__img::after {
   content: "";
@@ -215,13 +224,6 @@ section {
   background: #000;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-}
-.projects__img:hover::after {
-  top: 0;
-  opacity: 0.9;
-}
-.projects__img:hover .projects__btn {
-  opacity: 1;
 }
 .projects__btns {
   position: absolute;
@@ -333,6 +335,11 @@ ul {
   padding: 0;
 }
 
+section {
+  scroll-margin-top: 80px;
+  padding: 5rem 1.5rem;
+}
+
 #footer {
   scroll-margin-top: 80px;
   padding: 5rem 1.5rem;
@@ -357,6 +364,12 @@ ul {
   display: flex;
   justify-content: center;
   padding: 1.5rem;
+}
+.social-icons a {
+  color: inherit;
+}
+.social-icons i {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

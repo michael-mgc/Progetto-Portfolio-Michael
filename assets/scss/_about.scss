@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: 1px solid black;
-
 }
 .about__container{
         height: auto;
@@ -30,8 +29,10 @@
         img{
             height: 50px;
             margin-bottom: 1em;
-            filter: grayscale(100%) 
-    }
+            transition: filter 0.5s ease;
+            filter: grayscale(100%)
+            } 
+            
         span{
             opacity: 0;
             visibility: hidden;
@@ -39,16 +40,22 @@
             
         }
 
-        &.active {
-            img{
-                filter: grayscale(0%)
-            }
 
-            span {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
 
+    &:hover {
+
+    img {
+        filter: grayscale(0%);
+    }
+
+    span {
+        opacity: 1;
+        visibility: visible;
     }
 }
+}
+
+   
+}
+
+

@@ -1,5 +1,4 @@
 const menuBtn = document.querySelector('.menu-btn');
-const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.menu-nav__item');
@@ -12,7 +11,6 @@ menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() { 
     if(!showMenu){
-        hamburger.classList.add('open');
         nav.classList.add('open');
         menuNav.classList.add('open');
         navItems.forEach(item => item.classList.add('open'))
@@ -20,30 +18,21 @@ function toggleMenu() {
 
         showMenu = true;
     } else {
-        hamburger.classList.remove('open');
-        nav.classList.remove('open');
-        menuNav.classList.remove('open');
-        navItems.forEach(item => item.classList.remove('open'))
+      
+        closeMenu();
 
-        showMenu = false;
     }
  }
 
- console.log(menuBtn);
 
+ function closeMenu() { 
+    nav.classList.remove('open');
+    menuNav.classList.remove('open');
+    navItems.forEach(item => item.classList.remove('open'))
 
+    showMenu = false;
+  }
 
- // grafica colori _About
-
- const items = document.querySelectorAll('.item')
-
- items.forEach(item => {
-    item.addEventListener('click', () =>{
-        
-        items.forEach(item => {
-            item.classList.remove('active');
-        });
-
-        item.classList.add('active');
-    });
- });
+  navItems.forEach(item => {
+    item.addEventListener('click', closeMenu);
+  });

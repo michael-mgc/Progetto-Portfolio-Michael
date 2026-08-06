@@ -30,11 +30,24 @@
 
     overflow: hidden;
     cursor: pointer;
+
+    
+        &:hover{
+            .projects__img::after{
+                top: 0;
+                opacity: 0.9;
+            }
+             .projects__btn{     // IMPORTANT: the hover effect starts here for &__btn
+                 opacity: 1;
+                }
+
+        }
+   
     
 }
 
 &__img{
-        background-color: aquamarine;
+        background-color: black;
         height: 10rem;
         width: 100%;
         border-top-left-radius: 5%;
@@ -46,7 +59,17 @@
 
         img{
             width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 2s ease;
+            
         }
+
+        &:hover img{
+                transform: translateY(-40%);
+            }
+
+
         &::after{
             content: '';
             position: absolute;
@@ -60,16 +83,6 @@
 
         }
 
-        &:hover{
-            &::after{
-                top: 0;
-                opacity: 0.9;
-            }
-             .projects__btn{     // IMPORTANT: the hover effect starts here for &__btn
-                 opacity: 1;
-                }
-
-        }
 
     }
 
@@ -97,6 +110,8 @@
 
 &__body{
     padding: 10px 10px;
+
+
 }
  }
 
