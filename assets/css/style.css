@@ -286,6 +286,47 @@
   font-size: 1rem;
 }
 
+#cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
+}
+
+.cv__curriculum-vitae section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.cv__curriculum-vitae {
+  width: 100%;
+  margin: 3rem auto;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid black;
+  padding: 1rem;
+}
+.cv__curriculum-vitae h1, .cv__curriculum-vitae h2 {
+  font-size: large;
+}
+.cv__curriculum-vitae h3 {
+  font-size: large;
+}
+.cv__curriculum-vitae p, .cv__curriculum-vitae span, .cv__curriculum-vitae ul {
+  font-size: medium;
+}
+.cv__curriculum-vitae .cv__skills {
+  display: flex;
+}
+.cv__curriculum-vitae .cv__skills div {
+  width: 50%;
+}
+.cv__curriculum-vitae .cv__skills ul {
+  list-style: square;
+  box-sizing: border-box;
+  margin: 1rem;
+}
+
 body {
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
