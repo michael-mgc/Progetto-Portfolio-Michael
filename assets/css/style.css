@@ -120,8 +120,9 @@
 #about {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   border-bottom: 1px solid black;
+  min-height: calc(100vh - 80px);
 }
 
 .about__container {
@@ -166,6 +167,7 @@
   flex-direction: column;
   justify-content: flex-start;
   border-bottom: 1px solid black;
+  min-height: calc(100vh - 80px);
 }
 
 .projects__container {
@@ -180,7 +182,7 @@
 .projects__card {
   background-color: white;
   margin: auto;
-  width: 18rem;
+  width: 19rem;
   height: auto;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
@@ -248,49 +250,70 @@
   padding: 10px 10px;
 }
 
-.contacts__container {
+#contacts {
+  min-height: calc(100vh - 80px);
+}
+
+.contacts {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+.contacts__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contacts__form input, .contacts__form textarea {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+}
+.contacts__form textarea {
+  min-height: 100px;
+  resize: none;
+}
+.contacts__form button {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  border-radius: 340282000000000000000000000000000000000px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 .contacts__list {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
 }
-.contacts__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 1.5rem;
-  cursor: pointer;
+
+h4 {
+  color: oklch(44.2% 0.017 285.786deg);
 }
-.contacts__item h6 {
+
+.contacts__social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  gap: 20px;
+}
+.contacts__social .link {
   color: oklch(44.2% 0.017 285.786deg);
   transition: all 0.5s ease-in-out;
 }
-.contacts__item h6:hover {
+.contacts__social .link:hover {
   color: #000;
 }
 .contacts__social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
+  transition: all 0.5s ease-in-out;
 }
-.contacts__social span {
-  font-size: 1rem;
-}
-
-#cv {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-bottom: 1px solid black;
+.contacts__social:hover {
+  color: #000;
 }
 
 .cv__curriculum-vitae section {
@@ -381,28 +404,49 @@ section {
   padding: 5rem 1.5rem;
 }
 
+.ask {
+  width: auto;
+}
+.ask h3 {
+  font-size: 1.5rem;
+}
+.ask .btn {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  border-radius: 340282000000000000000000000000000000000px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 #footer {
-  scroll-margin-top: 80px;
   padding: 5rem 1.5rem;
 }
 
 .footer {
   background: #000;
   color: #fff;
+}
+.footer__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.footer h5, .footer h4 {
+.footer__container h5, .footer__container h4 {
   margin-top: 1rem;
+  color: #fff;
 }
 
 .social-icons {
   font-size: 2rem;
   border-bottom: 1px solid #fff;
   display: flex;
+  width: 90%;
   justify-content: center;
   padding: 1.5rem;
 }

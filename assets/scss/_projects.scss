@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: 1px solid black;
+    min-height: calc(100vh - 80px);
+
 
 }
 
@@ -24,7 +26,7 @@
 &__card{
     background-color: white;
     margin: auto;
-    width: 18rem;
+    width: 19rem;
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;

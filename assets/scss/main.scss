@@ -1,13 +1,14 @@
 @use "sass:map";
 
 @import 'config';
-@import 'responsive';
 @import 'menu';
 @import 'home';
 @import 'about';
 @import 'projects';
 @import 'contacts';
 @import 'cv';
+@import 'responsive';
+
 
 
 //  sass assets/scss/main.scss assets/css/style.css --watch
@@ -67,10 +68,32 @@ section {
   padding: 5rem 1.5rem;
 }
 
+.ask{
+    width: auto;
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+
+    .btn {
+        background: $secondary-color;
+        color: $primary-color;
+        padding: 10px;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 1.5rem;
+        border-radius: 3.40282e38px; 
+        box-sizing: border-box;
+        cursor: pointer;
+       
+    }
+}
+
+
 
 // === Footer ===
 #footer{
-    scroll-margin-top: 80px;
   padding: 5rem 1.5rem;
 
 
@@ -79,6 +102,8 @@ section {
 .footer{
     background: $secondary-color;
     color: set-text-color($secondary-color);
+
+    &__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,8 +113,10 @@ section {
 
     h5, h4{
         margin-top: $spacing-sm;
+        color: $primary-color;
     }
 
+}
     
 }
 
@@ -101,6 +128,7 @@ section {
         font-size: 2rem;
         border-bottom: 1px solid $primary-color;
         display: flex;
+        width: 90%;
         justify-content: center;
         padding: 1.5rem;
 
