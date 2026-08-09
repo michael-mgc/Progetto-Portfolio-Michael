@@ -98,7 +98,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid black;
   min-height: calc(100vh - 80px);
 }
 #home .home__container {
@@ -256,18 +255,29 @@
 
 .contacts {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 .contacts__form {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.contacts__form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
 }
 .contacts__form input, .contacts__form textarea {
+  align-self: center;
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   font-size: 15px;
+  width: 100%;
 }
 .contacts__form textarea {
   min-height: 100px;
@@ -280,7 +290,7 @@
   margin-top: 20px;
   font-size: 1.5rem;
   border-radius: 340282000000000000000000000000000000000px;
-  box-sizing: border-box;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -319,6 +329,7 @@ h4 {
 .cv__curriculum-vitae section {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-bottom: none;
   padding: 0;
 }
 .cv__curriculum-vitae {
@@ -402,6 +413,7 @@ ul {
 section {
   scroll-margin-top: 80px;
   padding: 5rem 1.5rem;
+  border-bottom: 1px solid black;
 }
 
 .ask {

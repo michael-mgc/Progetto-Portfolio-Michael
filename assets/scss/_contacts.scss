@@ -7,21 +7,36 @@
 .contacts{
       
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            justify-content: center;
+            text-align: left;
 
 
-    &__form{
-        width: 100%;
+
+&__form{
+       display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+
+    form{
         display: flex;
         flex-direction: column;
+        margin: auto;
+        width: 100%;
+        max-width: 650px;
+    }
       
       
     
+
     input, textarea {
+        align-self: center;
         box-sizing: border-box;
         padding: 0.5rem 1rem;
         font-size: 15px;
+        width: 100%;
     }
 
     textarea{
@@ -36,8 +51,9 @@
         padding: 10px;
         margin-top: 20px;
         font-size: 1.5rem;
-        border-radius: 3.40282e38px; 
-        box-sizing: border-box;
+        border-radius: 3.40282e38px;
+        width: 100%;
+        // box-sizing: border-box;
         cursor: pointer;
        
     }
@@ -45,6 +61,7 @@
 
     }
 }
+
 
     .contacts__list{    
     display: flex;

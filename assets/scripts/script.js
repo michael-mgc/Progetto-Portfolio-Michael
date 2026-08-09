@@ -36,3 +36,9 @@ function toggleMenu() {
   navItems.forEach(item => {
     item.addEventListener('click', closeMenu);
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && showMenu) {
+        closeMenu();
+    }
+});
