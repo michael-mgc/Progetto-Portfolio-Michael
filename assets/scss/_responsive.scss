@@ -1,4 +1,91 @@
 @include media-lg {
    
-   
+    @media (min-width: 1024px) {
+
+        // Header section
+
+       .header {
+        // padding: 1rem 3rem;
+
+       .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
+
+        .logo {
+            font-size: 1.75rem;
+        }
+    }
+
+    // menu burger responsive
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+        width: auto;
+        height: auto;
+        visibility: visible;
+        transform: none;
+
+        .menu-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding: 0;
+            background: transparent;
+            transform: none;
+
+            &.open {
+                transform: none;
+                border-bottom: 0;
+                box-shadow: none;
+            }
+
+            &__item {
+                transform: none;
+
+                &.open {
+                    transform: none;
+                }
+            }
+
+            &__link {
+                padding: 1rem;
+                &:hover{
+            color: red;
+        }
+    }
+            }
+        }
+
+
+        // Project section responsive 
+
+        .projects {
+            &__list {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+                margin-inline: auto;
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+
+}
+   

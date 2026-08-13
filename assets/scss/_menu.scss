@@ -1,58 +1,62 @@
 
 .menu-btn{
-    position: absolute;
-    z-index:1;
-    right: 2rem;
-    top: 2rem;
+    position: relative;
+    z-index:10;
+
     height: 20px;
     width: 28px;
+    border: 0;
+    padding: 0;
     cursor: pointer;
-    @include transition-ease;
+    background: transparent;
 
     &__burger {
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
+        display: block;
+        position: relative;
         width: 28px;
         height: 3px;
         background: set-text-color($primary-color);
-        @include transition-ease;
 
-        &::before{
-            content: '';
-            position: absolute;
-            top: -8px;
-            width: 28px;
-            height: 3px;
-            background: set-text-color($primary-color);
-            @include transition-ease;
-        }
 
+        &::before, 
         &::after{
             content: '';
             position: absolute;
-            top: 8px;
+            left: 0;
             width: 28px;
             height: 3px;
             background: set-text-color($primary-color);
-            @include transition-ease;
+        }
+                &::before {
+                    top: -8px;
+                }
+                &::after {
+                    top: 8px;
+                }
+
+
+       
         }
     }
 
-}
+
 
 .nav{
+    z-index: 5;
     position: fixed;
-    padding-top: $header-height;
-    top: 0;    /* promemoria per l'altezza della tendina */
+    top: 80px;
     left: 0;
-    width: 100vw;
-    visibility: hidden;    
+    width: 100%;
+    height: calc(auto - $header-height);   
+    @include transition-ease;
+    visibility: hidden;
 
 
 
     &.open {
-        visibility: visible;
+            transform: translateX(0);
+            visibility: visible;
+
     }
 
     .menu-nav{
@@ -60,39 +64,36 @@
         flex-flow: column wrap;
         align-items:flex-start;
         justify-content: flex-start;
-        height: 100%;
         background: $primary-color;
-        padding: 0 24px;
-        overflow: hidden;
+        padding: 0 2rem;
+        margin: 0;
+        z-index: 6;
         list-style-type: none;
-        padding-right: 1rem;
         transform: translateY(-100%);
         @include transition-ease;        
 
         &.open {
             transform: translateY(0);
-            border-bottom: 1px solid darkgrey;
+            border-bottom: 1px solid $border-color;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
         }
 
         &__item{
-            transform: translateX(100vw);
+            transform: translateX(100vh);
             @include transition-ease;
 
             &.open{
               transform:translateX(0);
         }
 
-            &.active > a {
-                color: $secondary-color;
-            }
     }
+    
     &__link {
         display: inline-block;
         font-size: 1rem;
         text-transform: uppercase;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         font-weight: 400;
         @include transition-ease;
 
