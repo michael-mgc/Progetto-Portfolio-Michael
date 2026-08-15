@@ -26,11 +26,14 @@
 &__card{
     background-color: white;
     margin: auto;
-    width: 19rem;
+    width: 100%;
+    max-width: 22rem;
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
 
     overflow: hidden;
     cursor: pointer;
@@ -46,13 +49,18 @@
                 }
 
         }
+
+        h3{
+            color: $secondary-color;
+            font-size: x-large;
+        }
    
     
 }
 
 &__img{
         background-color: black;
-        height: 10rem;
+        height: 12rem;
         width: 100%;
         border-top-left-radius: 5%;
         border-top-right-radius: 5%;
@@ -114,6 +122,7 @@
 
 &__body{
     padding: 10px 10px;
+    height: 11rem;
 
 
 }

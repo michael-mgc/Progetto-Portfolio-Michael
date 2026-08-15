@@ -12,7 +12,6 @@
             text-align: left;
 
 
-
 &__form{
        display: flex;
         flex-direction: column;
@@ -46,20 +45,24 @@
     }
 
     button {
+        align-self: center;
         background: $secondary-color;
         color: $primary-color;
         padding: 10px;
+        width: 200px;
         margin-top: 20px;
         font-size: 1.5rem;
-        border-radius: 3.40282e38px;
-        width: 100%;
-        // box-sizing: border-box;
+        border-radius: 3.40282e38px; 
+        box-sizing: border-box;
         cursor: pointer;
+        &:hover{
+        background-color: $accent-color;
+        @include transition-ease;
        
+            }
     }
 
-
-    }
+}
 }
 
 
@@ -68,6 +71,8 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
+    max-width: 650px;
     }
     
     h4{
@@ -80,6 +85,7 @@
             align-items: center;
             font-size: 2rem;
             gap: 20px;
+             @include transition-ease;
 
             .link{
                 color: $accent-color;
@@ -90,7 +96,7 @@
              }
             }
             
-            @include transition-ease;
+         
 
              &:hover {
         color: set-text-color(set-text-color($secondary-color));
