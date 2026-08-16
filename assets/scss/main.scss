@@ -112,7 +112,6 @@ section {
         &:hover{
         background-color: $accent-color;
         @include transition-ease;
-        // color: $secondary-color; 
         }
         }
 

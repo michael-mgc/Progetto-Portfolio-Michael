@@ -416,6 +416,7 @@ h4 {
     box-sizing: border-box;
     border: none;
     box-shadow: none;
+    overflow: hidden;
   }
   .cv__curriculum-vitae .cv__header {
     display: flex;
