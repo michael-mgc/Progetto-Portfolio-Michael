@@ -20,3 +20,12 @@ navItems.forEach(item => {
     });
 
 });
+
+
+// Download PDF
+
+const printBtn = document.querySelector("#print-cv");
+
+printBtn.addEventListener("click", () => {
+    window.print();
+})

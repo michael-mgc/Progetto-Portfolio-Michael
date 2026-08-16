@@ -1,6 +1,11 @@
 
 .cv{
 
+    .print-cv {
+    @include button-style;
+    margin-top: 0;
+}
+
 
 
 &__curriculum-vitae {
@@ -53,5 +58,77 @@
 }
 }
 
+// Download PDF
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header.header {
+        display: none !important;
+    }
+
+    .ask,
+    footer.footer,
+    .print-cv {
+        display: none !important;
+    }
+
+    main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cv {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cv__container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cv__curriculum-vitae {
+        width: 210mm;
+        height: 296mm;
+
+        margin: 0 !important;
+        padding: 1.5rem;
+
+        box-sizing: border-box;
+
+        border: none;
+        box-shadow: none;
+
+    // layout destop
+        .cv__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            div {
+                width: 50%;
 
 
+            }
+        }
+
+        .cv__skills{
+            display: flex;
+
+            div {
+                width: 50%;
+            }
+        }
+    }
+}

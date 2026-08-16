@@ -62,3 +62,22 @@ $spacing-lg: 5rem;
         
     }
 }
+
+// Button
+
+ @mixin button-style {
+        background: $secondary-color;
+        color: $primary-color;
+        padding: 10px;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 1.5rem;
+        border-radius: 3.40282e38px; 
+        box-sizing: border-box;
+        cursor: pointer;
+        
+        &:hover{
+        background-color: $accent-color;
+        @include transition-ease;
+        }
+        }
