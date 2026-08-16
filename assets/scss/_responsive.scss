@@ -130,7 +130,8 @@ h2{
 
         .cv__curriculum-vitae{
                 padding: 1.5rem;
-                max-height: 297mm;
+                max-height: 296mm;
+                overflow: hidden;
 
 
 
@@ -154,6 +155,10 @@ h2{
     p, span, ul{
         font-size: large;
     }
+
+    .cv__other{
+        border-bottom: none!important;
+         }
         
     
     }

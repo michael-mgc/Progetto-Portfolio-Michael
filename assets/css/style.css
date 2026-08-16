@@ -103,7 +103,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid black;
   min-height: calc(100vh - 80px);
 }
 
@@ -148,7 +147,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-bottom: 1px solid black;
   min-height: calc(100vh - 80px);
 }
 
@@ -403,6 +401,9 @@ h4 {
     margin: 0 !important;
     padding: 0 !important;
   }
+  section {
+    border-bottom: none !important;
+  }
   .cv {
     margin: 0 !important;
     padding: 0 !important;
@@ -415,11 +416,14 @@ h4 {
     width: 210mm;
     height: 296mm;
     margin: 0 !important;
-    padding: 1.5rem;
+    padding: 2rem !important;
     box-sizing: border-box;
-    border: none;
+    border: none !important;
     box-shadow: none;
-    overflow: hidden;
+    overflow: hidden !important;
+  }
+  .cv__curriculum-vitae .cv__other {
+    border-bottom: none !important;
   }
   .cv__curriculum-vitae .cv__header {
     display: flex;
@@ -522,7 +526,8 @@ h4 {
   }
   .cv__curriculum-vitae {
     padding: 1.5rem;
-    max-height: 297mm;
+    max-height: 296mm;
+    overflow: hidden;
   }
   .cv__curriculum-vitae .cv__header {
     display: flex;
@@ -541,6 +546,9 @@ h4 {
   }
   .cv__curriculum-vitae p, .cv__curriculum-vitae span, .cv__curriculum-vitae ul {
     font-size: large;
+  }
+  .cv__curriculum-vitae .cv__other {
+    border-bottom: none !important;
   }
   .contacts .contacts__text {
     max-width: 650px;

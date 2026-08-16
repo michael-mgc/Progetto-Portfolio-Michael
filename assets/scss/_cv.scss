@@ -92,6 +92,10 @@
         padding: 0 !important;
     }
 
+      section{
+            border-bottom: none!important;
+        }
+
     .cv {
         margin: 0 !important;
         padding: 0 !important;
@@ -107,14 +111,19 @@
         height: 296mm;
 
         margin: 0 !important;
-        padding: 1.5rem;
+        padding:2rem !important;
 
         box-sizing: border-box;
 
-        border: none;
+        border: none!important;
         box-shadow: none;
 
-        overflow: hidden;
+        overflow: hidden!important;
+      
+
+        .cv__other{
+        border-bottom: none!important;
+         }
 
     // layout destop
         .cv__header {
@@ -136,5 +145,6 @@
                 width: 50%;
             }
         }
+    
     }
 }
