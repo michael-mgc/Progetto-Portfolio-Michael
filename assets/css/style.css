@@ -341,12 +341,6 @@ h4 {
 .cv .print-cv {
   margin-top: 0;
 }
-.cv__curriculum-vitae section {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: none;
-  padding: 0;
-}
 .cv__curriculum-vitae {
   width: 100%;
   max-width: 210mm;
@@ -356,6 +350,12 @@ h4 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border: 1px solid black;
   padding: 1rem;
+}
+.cv__curriculum-vitae section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  padding: 0;
 }
 .cv__curriculum-vitae h1, .cv__curriculum-vitae h2 {
   font-size: large;
@@ -376,6 +376,9 @@ h4 {
   list-style: square;
   box-sizing: border-box;
   margin: 1rem;
+}
+.cv__curriculum-vitae .cv__other {
+  border-bottom: none;
 }
 
 @media print {
