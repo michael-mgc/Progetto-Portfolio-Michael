@@ -73,35 +73,56 @@
     gap: 2rem;
     width: 100%;
     max-width: 650px;
+
     }
     
-    h4{
-        color: $accent-color;
+    .card{
+        border: none;
+
     }
 
-        .contacts__social{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            font-size: 2rem;
-            gap: 20px;
-             @include transition-ease;
+    .card-body{
+        
+    }
 
-            .link{
-                color: $accent-color;
-                @include transition-ease;
+    .card-title{
+        margin-bottom: 80px;
+    }
 
-             &:hover {
-        color: set-text-color(set-text-color($secondary-color));
-             }
-            }
+    .list-group-item{
+        padding: 20px;
+        font-size: large;
+        display: flex;
+        // justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        
+    }
+
+
+        // .contacts__social{
+        //     display: flex;
+        //     justify-content: flex-start;
+        //     align-items: center;
+        //     font-size: 2rem;
+        //     gap: 20px;
+        //      @include transition-ease;
+
+        //     .link{
+        //         color: $accent-color;
+        //         @include transition-ease;
+
+        //      &:hover {
+        // color: set-text-color(set-text-color($secondary-color));
+        //      }
+        //     }
             
          
 
-             &:hover {
-        color: set-text-color(set-text-color($secondary-color));
-             }
-        }
+        //      &:hover {
+        // color: set-text-color(set-text-color($secondary-color));
+        //      }
+        // }
 
     
 

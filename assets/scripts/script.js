@@ -29,3 +29,11 @@ const printBtn = document.querySelector("#print-cv");
 printBtn.addEventListener("click", () => {
     window.print();
 })
+
+// Invio Email JS 
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+});

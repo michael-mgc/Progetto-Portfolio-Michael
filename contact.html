@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti Michael Soto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
@@ -49,42 +50,98 @@
                 <p>Hai un progetto, una collaborazione o vuoi semplicemente metterti in contatto?<br> Scrivimi, sarò felice di risponderti.</p>
                 </div>
                 <div class="contacts__form">
-                <form>
-                    <label for="name">Nome *</label>
-                    <input 
-                        type="text" 
-                        id="name"
-                        name="name"
-                        placeholder="Inserisci il tuo nome">
+            
+  <!-- nuovo form-->
+    <form id="contact-form">
+    
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome *</label>
+        <input 
+            type="text" 
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Inserisci il tuo nome"
+            required>
+    </div>
 
-                    <label for="name">Email *</label>
-                    <input 
-                        type="text" 
-                        id="email"
-                        name="email"
-                        placeholder="Inserisci la tua email">
-                    
-                    <label for="message">Messaggio *</label>
-                    <textarea 
-                        id="message"
-                        name="message"
-                        placeholder="Scrivi il tuo messaggio"></textarea>
-                    
-                    <button type="submit">
-                        Invia
-                    </button>
-                </form>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email *</label>
+        <input 
+            type="email" 
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Inserisci la tua email"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label for="message" class="form-label">Messaggio *</label>
+        <textarea 
+            id="message"
+            name="message"
+            class="form-control"
+            placeholder="Scrivi il tuo messaggio"
+            rows="5"
+            required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Invia
+    </button>
+
+</form>
                 </div>
         </section>
 
-        <section class="contacts__list">
+         <!-- Altra section-->
 
-                    <h2>I miei contatti</h2>
-                    
-                    <div class="contacts__address">
-                        <h4>michael.smj97@gmail.com</h4>
-                    </div>
-                     <div class="contacts__social">                
+         <section class="contacts__list card">
+    <div class="card-body">
+
+        <h2 class="card-title">I miei contatti</h2>
+
+        <div class="list-group mb-4">
+            <a href="mailto:michael.smj97@gmail.com"
+               class="list-group-item list-group-item-action">
+                <i class="fa-regular fa-envelope"></i>
+                michael.smj97@gmail.com
+            </a>
+        </div>
+
+        <div class="list-group mb-4">
+            <a href="https://www.linkedin.com/in/michael-soto-marocho-4a075234a/" target="_blank" rel="noopener noreferrer"
+               class="list-group-item list-group-item-action">
+                <i class="fa-brands fa-linkedin"></i>
+                Linkedin
+            </a>
+        </div>
+
+         <div class="list-group mb-4">
+            <a href="https://github.com/michael-mgc" target="_blank" rel="noopener noreferrer"
+               class="list-group-item list-group-item-action">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+        </div>
+
+         <div class="list-group mb-4">
+            <a href="https://account.start2impact.it/profile/michael-soto-marocho" target="_blank" rel="noopener noreferrer"
+               class="list-group-item list-group-item-action">
+                        <i class="fa-solid fa-rocket"></i>
+                Start2Impact
+            </a>
+        </div>
+
+         
+
+        
+
+        <!-- <h5>Seguimi anche su</h5>
+
+        <div class="contacts__social">
+             <div class="contacts__social">                
                     <a href="mailto:michael.smj97@gmail.com" class="link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-regular fa-envelope"></i>
                     </a>
@@ -99,7 +156,10 @@
                     </a>
 
                     </div>
-         </section>
+        </div> -->
+
+    </div>
+</section>
 
 </main>
         <footer id="footer" class="footer">
