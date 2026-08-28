@@ -134,10 +134,17 @@ h2{
             flex-direction: row;
             div{
                 width: 50%;
-                h1, h2 {
-                    margin: 0;
-        font-size:x-large;
-    }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    margin-bottom: 0.3rem;
+                    }
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                }
             }
         }
 
@@ -301,7 +308,7 @@ h2{
 
 
 .social-icons {
-        font-size: 4rem;
+        font-size: 3rem!important;
         border-bottom: 1px solid $primary-color;
         display: flex;
         justify-content: center;
