@@ -179,6 +179,11 @@ section {
         font-size: 2rem;
     }
 
+    img {
+         width: 2rem;
+        filter: brightness(0) invert(1);
+        }
+
 }
 
 

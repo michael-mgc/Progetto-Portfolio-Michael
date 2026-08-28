@@ -325,6 +325,10 @@
   align-items: center;
 }
 
+.start2impact-logo {
+  filter: brightness(0);
+}
+
 .cv .print-cv {
   background: #000;
   color: #fff;
@@ -706,6 +710,10 @@ section {
 }
 .social-icons i {
   font-size: 2rem;
+}
+.social-icons img {
+  width: 2rem;
+  filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=style.css.map */
