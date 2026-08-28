@@ -56,7 +56,7 @@ h3{
     border-bottom: 1px solid $border-color;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-    .container {
+    &__container {
 
         width: 100%;
         height: 100%;
@@ -129,7 +129,7 @@ section {
 
 // === Footer ===
 #footer{
-  padding: 5rem 1.5rem;
+  padding: 5rem 1.5rem!important;
 
 
 
@@ -168,6 +168,8 @@ section {
         display: flex;
         justify-content: center;
         padding: 1.5rem;
+        max-width: 1200px;
+        margin: auto;
 
           a {
         color: inherit;

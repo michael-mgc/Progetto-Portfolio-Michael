@@ -1,7 +1,17 @@
 
+.menu-toggle {
+    display: none;
+    z-index: 100;
+}
+
+
 .menu-btn{
     position: relative;
     z-index:10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     height: 20px;
     width: 28px;
@@ -39,26 +49,39 @@
         }
     }
 
+// -- Menu checkbox  
+.menu-toggle:checked ~ .main-nav {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.menu-toggle:checked ~ .main-nav .menu-nav {
+            transform: translateY(0);
+            border-bottom: 1px solid $border-color;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+        }
+
+.menu-toggle:checked ~ .main-nav .menu-nav__item {
+              transform:translateX(0);
+        }
+// Menu checkbox --
 
 
-.nav{
+.main-nav{
     z-index: 5;
     position: fixed;
     top: 80px;
     left: 0;
     width: 100%;
-    height: calc(auto - $header-height);   
+    height: calc(auto - $header-height);  
     @include transition-ease;
     visibility: hidden;
 
 
 
-    &.open {
-            transform: translateX(0);
-            visibility: visible;
-
-    }
-
+    
+  
     .menu-nav{
         display: flex;
         flex-flow: column wrap;
@@ -72,20 +95,13 @@
         transform: translateY(-100%);
         @include transition-ease;        
 
-        &.open {
-            transform: translateY(0);
-            border-bottom: 1px solid $border-color;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-        }
+     
 
         &__item{
             transform: translateX(100vh);
             @include transition-ease;
 
-            &.open{
-              transform:translateX(0);
-        }
+            
 
     }
     

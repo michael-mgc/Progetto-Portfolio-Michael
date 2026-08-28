@@ -4,7 +4,7 @@
 
        .header {
 
-       .container {
+       &__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -49,7 +49,7 @@ h2{
         display: none;
     }
 
-    .nav {
+    .main-nav {
         position: static;
         width: auto;
         height: auto;
@@ -66,29 +66,22 @@ h2{
             background: transparent;
             transform: none;
 
-            &.open {
-                transform: none;
-                border-bottom: 0;
-                box-shadow: none;
-            }
-
             &__item {
                 transform: none;
 
-                &.open {
-                    transform: none;
-                }
-            }
+                    }
 
             &__link {
                 padding: 1rem;
                 color: $accent-color;
                 &:hover{
-            color: $secondary-color;
+                    color: $secondary-color;
+                        }
+                    }
+                }
         }
-    }
-            }
-        }
+
+       
 
         // About section responsive
 
