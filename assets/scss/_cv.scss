@@ -1,8 +1,10 @@
+@use "sass:map";
+@use 'config';
 
 .cv{
 
     .print-cv {
-    @include button-style;
+    @include config.button-style;
     margin-top: 0;
 }
 
@@ -20,8 +22,8 @@
     padding: 1rem;
 
     section{
-        margin-top: $spacing-sm;
-        margin-bottom: $spacing-sm;
+        margin-top: config.$spacing-sm;
+        margin-bottom: config.$spacing-sm;
         border-bottom: none;
         padding: 0;
     }
@@ -62,3 +64,103 @@
 }
 }
 
+
+
+
+// Download PDF
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header.header {
+        display: none !important;
+    }
+
+    .ask,
+    footer.footer,
+    .print-cv {
+        display: none !important;
+    }
+
+    main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+      section{
+            border-bottom: none!important;
+        }
+
+    .cv {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cv__container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cv__curriculum-vitae {
+        width: 210mm;
+        height: 296mm;
+
+        margin: 0 !important;
+        padding:2rem !important;
+
+        box-sizing: border-box;
+
+        border: none!important;
+        box-shadow: none;
+
+        overflow: hidden!important;
+      
+
+        .cv__other{
+        border-bottom: none!important;
+         }
+
+    // layout destop
+        .cv__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            div {
+                width: 50%;
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    margin-bottom: 0.3rem;
+                    }
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                }
+
+
+            }
+        }
+
+        .cv__skills{
+            display: flex;
+
+            div {
+                width: 50%;
+            }
+        }
+    
+    }
+}

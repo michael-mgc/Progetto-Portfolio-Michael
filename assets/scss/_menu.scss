@@ -1,8 +1,16 @@
+@use "sass:map";
+@use 'config';
 
 .menu-toggle {
-    display: none;
+    position: absolute;
+    opacity: 0;
     z-index: 100;
 }
+
+.menu-toggle:focus + .menu-btn {
+    outline: 2px solid config.$accent-color;
+}
+
 
 
 .menu-btn{
@@ -25,7 +33,7 @@
         position: relative;
         width: 28px;
         height: 3px;
-        background: set-text-color($primary-color);
+        background: config.set-text-color(config.$primary-color);
 
 
         &::before, 
@@ -35,7 +43,7 @@
             left: 0;
             width: 28px;
             height: 3px;
-            background: set-text-color($primary-color);
+            background: config.set-text-color(config.$primary-color);
         }
                 &::before {
                     top: -8px;
@@ -57,7 +65,7 @@
 
 .menu-toggle:checked ~ .main-nav .menu-nav {
             transform: translateY(0);
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid config.$border-color;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
         }
@@ -71,14 +79,13 @@
 .main-nav{
     z-index: 5;
     position: fixed;
-    top: 80px;
+    top: config.$header-height;
     left: 0;
     width: 100%;
-    height: calc(auto - $header-height);  
-    @include transition-ease;
+    @include config.transition-ease;
     visibility: hidden;
 
-
+    
 
     
   
@@ -87,19 +94,19 @@
         flex-flow: column wrap;
         align-items:flex-start;
         justify-content: flex-start;
-        background: $primary-color;
+        background: config.$primary-color;
         padding: 0 2rem;
         margin: 0;
         z-index: 6;
         list-style-type: none;
         transform: translateY(-100%);
-        @include transition-ease;        
+        @include config.transition-ease;        
 
      
 
         &__item{
             transform: translateX(100vh);
-            @include transition-ease;
+            @include config.transition-ease;
 
             
 
@@ -111,10 +118,10 @@
         text-transform: uppercase;
         padding: 1.5rem 0;
         font-weight: 400;
-        @include transition-ease;
+        @include config.transition-ease;
 
         &:hover{
-            color: $secondary-color;
+            color: config.$secondary-color;
         }
     }
 }

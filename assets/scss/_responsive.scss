@@ -1,4 +1,7 @@
-@include media-lg {
+@use "sass:map";
+@use 'config';
+
+@include config.media-lg {
 
         // Header section
 
@@ -19,17 +22,17 @@
 
         body{
     h1 {
-            font-weight: map.get($font-weights, bold);
+            font-weight: map.get(config.$font-weights, bold);
             font-size: 5.5rem;
 }
 h2{
-        font-weight: map.get($font-weights, bold);
-        color: $secondary-color;
+        font-weight: map.get(config.$font-weights, bold);
+        color: config.$secondary-color;
         font-size:  2.5rem;
     }
     h3{
-        font-weight: map.get($font-weights, small);
-        color: $accent-color;
+        font-weight: map.get(config.$font-weights, small);
+        color: config.$accent-color;
         font-size: 2.5rem;
 
     }
@@ -37,8 +40,8 @@ h2{
 
     p{
         font-size: 1.2rem;
-        color: $accent-color;
-        font-weight: map.get($font-weights, small);
+        color: config.$accent-color;
+        font-weight: map.get(config.$font-weights, small);
 
     }
 }
@@ -73,9 +76,9 @@ h2{
 
             &__link {
                 padding: 1rem;
-                color: $accent-color;
+                color: config.$accent-color;
                 &:hover{
-                    color: $secondary-color;
+                    color: config.$secondary-color;
                         }
                     }
                 }
@@ -123,8 +126,8 @@ h2{
 
         .cv__curriculum-vitae{
                 padding: 1.5rem;
-                max-height: 296mm;
-                overflow: hidden;
+                // max-height: 296mm;
+                // overflow: hidden;
 
 
 
@@ -180,8 +183,8 @@ h2{
 
             h4{
             
-        font-weight: map.get($font-weights, bold);
-        color: $accent-color;
+        font-weight: map.get(config.$font-weights, bold);
+        color: config.$accent-color;
         font-size:  1.5rem;
     
             }
@@ -195,22 +198,22 @@ h2{
     }
 
 
-@include media-xl {
+@include config.media-xl {
 
     
         body{
     h1 {
-            font-weight: map.get($font-weights, bold);
+            font-weight: map.get(config.$font-weights, bold);
             font-size: 7rem;
 }
 h2{
-        font-weight: map.get($font-weights, bold);
-        color: $secondary-color;
+        font-weight: map.get(config.$font-weights, bold);
+        color: config.$secondary-color;
         font-size:  3.5rem;
     }
     h3{
-        font-weight: map.get($font-weights, small);
-        color: $accent-color;
+        font-weight: map.get(config.$font-weights, small);
+        color: config.$accent-color;
         font-size: 3.5rem;
 
     }
@@ -218,8 +221,8 @@ h2{
 
     p{
         font-size: 2rem;
-        color: $accent-color;
-        font-weight: map.get($font-weights, small);
+        color: config.$accent-color;
+        font-weight: map.get(config.$font-weights, small);
 
     }
 }
@@ -266,8 +269,8 @@ h2{
 
             h4{
             
-        font-weight: map.get($font-weights, bold);
-        color: $accent-color;
+        font-weight: map.get(config.$font-weights, bold);
+        color: config.$accent-color;
         font-size:  1.5rem;
     
             }
@@ -288,7 +291,7 @@ h2{
     
 
         .social-icons{
-            border-bottom: 1px solid $primary-color;
+            border-bottom: 1px solid config.$primary-color;
             font-size: 3.2rem;
             max-width: 1200px;
         }
@@ -309,7 +312,7 @@ h2{
 
 .social-icons {
         font-size: 3rem!important;
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 1px solid config.$primary-color;
         display: flex;
         justify-content: center;
         padding: 1.5rem;

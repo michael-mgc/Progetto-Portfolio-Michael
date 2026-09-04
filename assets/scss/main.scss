@@ -1,13 +1,13 @@
 @use "sass:map";
-@import 'config';
+@use 'config';
 
-@import 'menu';
-@import 'home';
-@import 'about';
-@import 'projects';
-@import 'contacts';
-@import 'cv';
-@import 'responsive';
+@use 'menu';
+@use 'home';
+@use 'about';
+@use 'projects';
+@use 'contacts';
+@use 'cv';
+@use 'responsive';
 
 
 
@@ -15,31 +15,31 @@
 //  sass assets/scss/main.scss assets/css/style.css --watch
 
 body{
-    background: $primary-color;
-    font-family: $font-main;
+    background: config.$primary-color;
+    font-family: config.$font-main;
     line-height: 2;
-    color: set-text-color($primary-color);
+    color: config.set-text-color(config.$primary-color);
 
 }
 h1,h2 {
-    font-weight: map.get($font-weights, bold);
+    font-weight: map.get(config.$font-weights, bold);
     font-size: 2em;
 }
 h3{
-        font-weight: map.get($font-weights, small);
-        color: $accent-color;
+        font-weight: map.get(config.$font-weights, small);
+        color: config.$accent-color;
     }
 
     p{
-        font-weight: map.get($font-weights, small);
+        font-weight: map.get(config.$font-weights, small);
         font-size: 16px;
-        color: $accent-color;
+        color: config.$accent-color;
     }
 
 
  a {
     text-decoration: none;
-    color: set-text-color($primary-color);
+    color: config.set-text-color(config.$primary-color);
  }
 
  .header{
@@ -51,9 +51,9 @@ h3{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: $header-height;
-    background: $primary-color;
-    border-bottom: 1px solid $border-color;
+    height: config.$header-height;
+    background: config.$primary-color;
+    border-bottom: 1px solid config.$border-color;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
     &__container {
@@ -69,7 +69,7 @@ h3{
 
     .logo{
         text-decoration: none;
-        color: $secondary-color;
+        color: config.$secondary-color;
         font-size: 1.5rem;
         font-weight: bold;
         z-index: 9;
@@ -83,7 +83,7 @@ ul{
     }
 
 section {
-  scroll-margin-top: $header-height;
+  scroll-margin-top: config.$header-height;
   padding: 5rem 1.5rem;
   border-bottom: 1px solid black;
   max-width: 1200px;
@@ -100,27 +100,11 @@ section {
 
 
     &__btn {
-        background: $secondary-color;
-        color: $primary-color;
-        padding: 10px;
-        width: 200px;
-        margin-top: 20px;
-        font-size: 1.5rem;
-        border-radius: 3.40282e38px; 
-        box-sizing: border-box;
-        cursor: pointer;
-        &:hover{
-        background-color: $accent-color;
-        @include transition-ease;
-        }
+        @include config.button-style;
+        
         }
 
-    a {
-    text-decoration: none;
-    color: inherit;
-    box-sizing: border-box;
-   
- }
+
 
     }
 
@@ -135,8 +119,8 @@ section {
 
 }
 .footer{
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
+    background: config.$secondary-color;
+    color: config.set-text-color(config.$secondary-color);
 
     &__container{
     display: flex;
@@ -149,8 +133,8 @@ section {
   
 
     h5, h4{
-        margin-top: $spacing-sm;
-        color: $primary-color;
+        margin-top: config.$spacing-sm;
+        color: config.$primary-color;
         
     }
 
@@ -164,7 +148,7 @@ section {
 
 .social-icons {
         font-size: 2rem;
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 1px solid config.$primary-color;
         display: flex;
         justify-content: center;
         padding: 1.5rem;

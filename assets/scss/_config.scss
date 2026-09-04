@@ -1,8 +1,6 @@
 @use "sass:color";
 @use "sass:map";
 
-
-
 $primary-color: #fff;
 $secondary-color: #000;
 $accent-color: oklch(44.2% .017 285.786);
@@ -66,6 +64,8 @@ $spacing-lg: 5rem;
 // Button
 
  @mixin button-style {
+        display: inline-block;
+        text-align: center;
         background: $secondary-color;
         color: $primary-color;
         padding: 10px;

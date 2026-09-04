@@ -1,4 +1,5 @@
-
+@use "sass:map";
+@use 'config';
 
 #projects{
     display: flex;
@@ -23,7 +24,7 @@
 }
 
 &__card{
-    background-color: white;
+    background-color: config.$primary-color;
     margin: auto;
     width: 100%;
     max-width: 22rem;
@@ -50,7 +51,7 @@
         }
 
         h3{
-            color: $secondary-color;
+            color: config.$secondary-color;
             font-size: x-large;
         }
    
@@ -58,12 +59,12 @@
 }
 
 &__img{
-        background-color: black;
+        background-color: config.$secondary-color;
         height: 12rem;
         width: 100%;
         border-top-left-radius: 5%;
         border-top-right-radius: 5%;
-        border-bottom: 1px solid $secondary-color;
+        border-bottom: 1px solid config.$secondary-color;
         position: relative;
         overflow: hidden;
 
@@ -88,9 +89,9 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background: $secondary-color;
+            background: config.$secondary-color;
             opacity: 0;
-            @include transition-ease
+            @include config.transition-ease
 
         }
 
@@ -111,11 +112,11 @@
 
 &__btn{
     opacity: 0;
-    color: set-text-color($secondary-color);
-    @include transition-ease;
+    color: config.set-text-color(config.$secondary-color);
+    @include config.transition-ease;
 
             &:hover {
-        color: set-text-color(set-text-color($secondary-color));
+        color: config.set-text-color(config.set-text-color(config.$secondary-color));
     }
 }
 
