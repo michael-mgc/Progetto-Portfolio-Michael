@@ -11,7 +11,24 @@
         flex-direction: column;
         justify-content: center;
        
-      
+        h1 {
+            order: 2;
+            }
+
+         h2 {
+            order: 1;
+            font-weight: map.get(config.$font-weights, small);
+            color: config.$accent-color;
+            font-size: 1.5rem;
+            margin-bottom: config.$spacing-sm;
+
+
+    
+            }
+
+        p {
+            order: 3;
+        }
         
 
     }

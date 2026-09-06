@@ -27,9 +27,6 @@ $spacing-lg: 5rem;
 
 
 
-
-
-
 @function set-text-color($color) {
     @if (color.channel($color, "lightness", $space: hsl) > 40%) {
         @return #000;
@@ -38,9 +35,13 @@ $spacing-lg: 5rem;
     }
 }
 
+
 @mixin transition-ease{
     transition: all 0.5s ease-in-out;
 }
+
+
+
 
 @mixin media-md {
     @media screen and (min-width: 768px){
@@ -60,6 +61,7 @@ $spacing-lg: 5rem;
         
     }
 }
+
 
 // Button
 

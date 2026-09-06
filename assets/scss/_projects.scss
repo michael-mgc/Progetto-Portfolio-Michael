@@ -2,25 +2,52 @@
 @use 'config';
 
 #projects{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: calc(100vh - 80px);
+        max-width: 100%;
+        background-color: config.$secondary-color;
+        padding: 0;
+        margin: 0;
+
+    
+    h2{
+        color: config.$primary-color;
+
+    }
+
 
 
 }
 
 .projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    scroll-margin-top: config.$header-height;
+
+
+
 
 &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     height: auto;
+    padding: 5rem 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+&__list.row>*{
+    padding-right: 0;
+    padding-left: 0;
 }
 
 &__list{
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    margin: 2rem auto 2rem auto;
+    // display: grid;
+    // // grid-template-columns: 1fr;
+    // grid-gap: 2rem;
 }
 
 &__card{
@@ -31,12 +58,15 @@
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 5%;
+    // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(245, 227, 227, 0.9);
+    border-bottom-left-radius: 5%;          
     border-bottom-right-radius: 5%;
 
     overflow: hidden;
-    cursor: pointer;
 
     
         &:hover{
@@ -46,14 +76,16 @@
             }
              .projects__btn{     // IMPORTANT: the hover effect starts here for &__btn
                  opacity: 1;
+                 color: config.set-text-color(config.$secondary-color);
+    @include config.transition-ease;
                 }
 
         }
 
-        h3{
-            color: config.$secondary-color;
-            font-size: x-large;
-        }
+        // h3{
+        //     color: config.$secondary-color;
+        //     font-size: x-large;
+        // }
    
     
 }
@@ -74,6 +106,8 @@
             height: auto;
             object-fit: cover;
             transition: transform 2s ease;
+                    box-sizing: border-box;
+
             
         }
 
@@ -111,12 +145,14 @@
 }
 
 &__btn{
-    opacity: 0;
-    color: config.set-text-color(config.$secondary-color);
+    // opacity: 0;
+    cursor: pointer;
+    color: config.set-text-color(config.$primary-color);
     @include config.transition-ease;
+    font-size: 2rem;
 
             &:hover {
-        color: config.set-text-color(config.set-text-color(config.$secondary-color));
+        color: config.set-text-color(config.set-text-color(config.$primary-color));
     }
 }
 

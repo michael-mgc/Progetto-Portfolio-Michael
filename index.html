@@ -15,130 +15,141 @@
 
     <header class="header">
     
-    <div class="header__container">
+        <div class="header__container">
 
-        <a href="index.html" class="logo">Michael Soto</a>
+            <a href="index.html" class="logo">Michael Soto</a>
 
         
         <!-- Menu burger-->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-btn" aria-label="Apri menu">
-            <span class="menu-btn__burger"></span>
-        </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn" aria-label="Apri menu">
+                <span class="menu-btn__burger"></span>
+            </label>
         
-    <nav class="main-nav">
-        <ul class="menu-nav">
-            <li class="menu-nav__item">
-                <a href="#home" class="menu-nav__link">Home</a>
-                </li>
-            <li class="menu-nav__item">
-                <a href="#about" class="menu-nav__link">Chi Sono</a>
-                </li>
-            <li class="menu-nav__item">
-                <a href="#projects" class="menu-nav__link">Proggetti</a>
-                </li>
-            <li class="menu-nav__item">
-                <a href="cv.html" class="menu-nav__link">CV</a>
-                </li>
-            <li class="menu-nav__item">
-                <a href="contact.html" class="menu-nav__link">Contatti</a>
-                </li>
-        </ul>
-    </nav>
-    </div>
+            <nav class="main-nav">
+                <ul class="menu-nav">
+                    <li class="menu-nav__item">
+                        <a href="#home" class="menu-nav__link">Home</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#about" class="menu-nav__link">Chi Sono</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#projects" class="menu-nav__link">Progetti</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="cv.html" class="menu-nav__link">CV</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="contact.html" class="menu-nav__link">Contatti</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="main">
         <section id="home">
-        <div class="home__container">
-        <h3>Junior Web Developer</h3>
-        <h1>Michael Soto</h1>
+            <div class="home__container">
+                <h1>Michael Soto</h1>
+
+                <h2>Junior Web Developer</h2>
                 <p>Sviluppo interfacce web moderne e responsive
                     utilizzando HTML, CSS, SCSS e JavaScript.
                     Attualmente sto approfondendo TypeScript, React
                     e lo sviluppo full stack.</p>
-        </div>
+            </div>
 
         </section>
 
         <section id="about">
-        <div class="about__container">
+            <div class="about__container">
 
-            <h2>Chi Sono</h2>
+                <h2>Chi Sono</h2>
 
-            <p>Mi chiamo Michael e sto costruendo il mio percorso nel mondo dello sviluppo web. Attualmente lavoro nella grande distribuzione, ma nel tempo libero studio programmazione 
+                <p>Mi chiamo Michael e sto costruendo il mio percorso nel mondo dello sviluppo web. Attualmente lavoro nella grande distribuzione, ma nel tempo libero studio programmazione 
                 con l'obiettivo di trasformare la mia passione in una nuova carriera professionale.
                 </p>            
                 <p>Le mie attuali competenze:</p>
-                <div class="items">
-                    <div class="item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="gray"/>
-                        <span>Html</span></div>
-                    <div class="item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="gray"/>
-                        <span>Css</span></div>
-                    <div class="item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="gray"/>
-                        <span>JavaScript</span></div>
+                    <div class="items">
+                        <div class="item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="gray" alt="Html"/>
+                            <span>Html</span>
+                        </div>
+                        <div class="item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="gray" alt="Css"/>
+                            <span>Css</span>
+                        </div>
+                        <div class="item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="gray" alt="JavaScript"/>
+                            <span>JavaScript</span>
+                        </div>
                     </div>
-                </div>
-        </div>
+            </div>
         </section>
 
         <section id="projects" class="projects">
             <div class="projects__container">
                 <h2>I miei progetti</h2>
-                <div class="projects__list">
-                    <div class="projects__card">
+
+                <div class="projects__list row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="projects__card">
                             <div class ="projects__img">
                                 <img src="assets/img/project_card/ScreenShotHotelPage.png" alt="Anteprima Hotel Home primo esercizio HTML">
                                 <div class="projects__btns">
                                     <a href="https://michael-mgc.github.io/Hotel-Landing-page/" target="_blank" class="projects__btn">
-                                     <i class="fas fa-eye"></i> Preview
+                                        <i class="fas fa-eye"></i> Preview
                                     </a>
                                     <a href="https://github.com/michael-mgc/Hotel-Landing-page" target="_blank" class="projects__btn">
-                                     <i class="fa-brands fa-github"></i> Github
-                                     </a>
-                                 </div>
+                                        <i class="fa-brands fa-github"></i> Github
+                                    </a>
+                                </div>
                             </div>
                             <div class="projects__body">
                                 <h3>Hotel Landing Page</h3>
-                                    <p>
-                                        Primo progetto web realizzato durante il percorso di formazione, sviluppato con HTML e CSS.
-                                    </p>
+                                <p>
+                                    Primo progetto web realizzato durante il percorso di formazione, sviluppato con HTML e CSS.
+                                </p>
                             </div>
-
                         </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="projects__card">
                             <div class ="projects__img">
                                 <img src="assets/img/project_card/ScreenShotPortfolio.png" alt="Anteprima portfolio personale">
                                 <div class="projects__btns">
                                     <a href="https://michael-mgc.github.io/Progetto-Portfolio-Michael/" target="_blank" class="projects__btn">
-                                     <i class="fas fa-eye"></i> Preview
+                                        <i class="fas fa-eye"></i> Preview
                                     </a>
                                     <a href="https://github.com/michael-mgc/Progetto-Portfolio-Michael" target="_blank" class="projects__btn">
-                                     <i class="fa-brands fa-github"></i> Github
-                                     </a>
-                                 </div>
+                                        <i class="fa-brands fa-github"></i> Github
+                                    </a>
+                                </div>
                             </div>
                             <div class="projects__body">
                                 <h3>Portfolio Personale</h3>
-                                    <p>
-                                        Il mio portfolio personale, realizzato con HTML, SCSS e JavaScript, con un design moderno e responsive.
-                                    </p>
+                                <p>
+                                    Il mio portfolio personale, realizzato con HTML, SCSS e JavaScript, con un design moderno e responsive.
+                                </p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="projects__card">
                             <div class ="projects__img">
-                                <img src="assets/img/project_card/ScreenshotCounter.png" alt="Anteprima proggetto Contatore JavaScript-DOM">
+                                <img src="assets/img/project_card/ScreenshotCounter.png" alt="Anteprima progetto Contatore JavaScript-DOM">
                                 <div class="projects__btns">
                                     <a href="https://michael-mgc.github.io/Javascript-DOM-counter/" target="_blank" class="projects__btn">
-                                     <i class="fas fa-eye"></i> Preview
+                                        <i class="fas fa-eye"></i> Preview
                                     </a>
                                     <a href="https://github.com/michael-mgc/Javascript-DOM-counter" target="_blank" class="projects__btn">
-                                     <i class="fa-brands fa-github"></i> Github
-                                     </a>
-                                 </div>
+                                        <i class="fa-brands fa-github"></i> Github
+                                    </a>
+                                </div>
                             </div>
                             <div class="projects__body">
                                 <h3>Contatore JavaScript</h3>
@@ -155,64 +166,67 @@
 
         <section class="ask">
             <div class="ask__container">
-                <h3>Hai un progetto in mente?</h3>
-            <p>Se hai un'idea, una collaborazione o vuoi semplicemente fare una domanda,
-            sarò felice di ascoltarti.
-        </p>
+                <h2>Hai un progetto in mente?</h2>
+                <p>Se hai un'idea, una collaborazione o vuoi semplicemente fare una domanda,
+                    sarò felice di ascoltarti.
+                </p>
 
-            <a href="contact.html" class="ask__btn">
-                Scrivimi
-            </a>
-        </div>
+                <a href="contact.html" class="ask__btn">
+                    Scrivimi
+                </a>
+            </div>
 
         </section>
-</main>
+    </main>
         
-    <footer id="footer" class="footer py-4">
-    <div class="container-fluid text-center">
+    <footer id="footer" class="footer">
+        <div class="container-fluid text-center">
 
-        <div class="footer__info">
-
-            <h4>
-                Michael Soto<br>
+            <div class="footer__info">
+                <h4>Michael Soto <br>
                 Junior Frontend Developer
-            </h4>
+                </h4>
 
-            <div class="social-icons d-flex justify-content-center gap-4 my-3">
+                <div class="social-icons d-flex justify-content-center gap-4 my-3">
 
-                <a href="https://www.instagram.com/" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                    <!-- <a href="https://www.instagram.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a> -->
+                    <a href="mailto:michael.smj97@gmail.com"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
 
-                <a href="https://github.com/michael-mgc" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-github"></i>
-                </a>
+                    <a href="https://github.com/michael-mgc" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
 
-                <a href="https://www.linkedin.com/in/michael-soto-marocho-4a075234a/" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+                    <a href="https://www.linkedin.com/in/michael-soto-marocho-4a075234a/" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
 
 
-                <a href="https://account.start2impact.it/profile/michael-soto-marocho" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <img src="assets/img/logo/start2impact.svg" alt="Start2Impact" class="start2impact-logo">
-                </a>
+                    <a href="https://account.start2impact.it/profile/michael-soto-marocho" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <img src="assets/img/logo/start2impact.svg" alt="Start2Impact" class="start2impact-logo">
+                    </a>
+
+                </div>
+
+                <h5>© 2026 Michael Soto. All rights reserved.</h5>
 
             </div>
 
-            <h5>© 2026 Michael Soto. All rights reserved.</h5>
-
         </div>
-
-    </div>
-</footer>
+    </footer>
 
 
     <script src="assets/scripts/script.js" defer></script>

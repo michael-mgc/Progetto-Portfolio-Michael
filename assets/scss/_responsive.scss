@@ -1,6 +1,51 @@
 @use "sass:map";
 @use 'config';
 
+
+@include config.media-md {
+    // menu burger responsive
+
+    .menu-btn {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        width: auto;
+        height: auto;
+        visibility: visible;
+        transform: none;
+
+        .menu-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding: 0;
+            background: transparent;
+            transform: none;
+
+            &__item {
+                transform: none;
+
+                    }
+
+            &__link {
+                padding: 1rem;
+                color: config.$accent-color;
+                &:hover{
+                    color: config.$secondary-color;
+                        }
+                    }
+                }
+        }
+
+       
+
+}
+
+
 @include config.media-lg {
 
         // Header section
@@ -111,9 +156,9 @@ h2{
 
         .projects {
             &__list {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 1200px;
-                margin-inline: auto;
+                // grid-template-columns: repeat(2, 1fr);
+                // max-width: 1200px;
+                // margin-inline: auto;
             }
 
             p{

@@ -21,26 +21,32 @@ body{
     color: config.set-text-color(config.$primary-color);
 
 }
-h1,h2 {
+h1, h2 {
+    color: config.$secondary-color;
     font-weight: map.get(config.$font-weights, bold);
     font-size: 2em;
+    margin-bottom: config.$spacing-md;
 }
-h3{
-        font-weight: map.get(config.$font-weights, small);
-        color: config.$accent-color;
-    }
-
-    p{
-        font-weight: map.get(config.$font-weights, small);
-        font-size: 16px;
-        color: config.$accent-color;
-    }
 
 
- a {
+h3 {
+    color: config.$secondary-color;
+    font-weight: map.get(config.$font-weights, medium);
+    font-size: 1.5em;
+}
+
+
+p{
+    font-weight: map.get(config.$font-weights, small);
+    font-size: 16px;
+    color: config.$accent-color;
+}
+
+
+a {
     text-decoration: none;
     color: config.set-text-color(config.$primary-color);
- }
+}
 
  .header{
     padding: 1rem 1.5rem;
@@ -71,7 +77,7 @@ h3{
         text-decoration: none;
         color: config.$secondary-color;
         font-size: 1.5rem;
-        font-weight: bold;
+        font-weight: map.get(config.$font-weights, bold);
         z-index: 9;
         }
  }
@@ -92,10 +98,11 @@ section {
 }
 
 .ask{
-    width: auto;
 
-    h3{
+    h2{
+        color: config.$accent-color;
         font-size: 1.5rem;
+        font-weight: map.get(config.$font-weights, medium);
     }
 
 
@@ -113,7 +120,7 @@ section {
 
 // === Footer ===
 #footer{
-  padding: 5rem 1.5rem!important;
+    padding: 5rem 1.5rem;
 
 
 
@@ -121,26 +128,16 @@ section {
 .footer{
     background: config.$secondary-color;
     color: config.set-text-color(config.$secondary-color);
-
-    &__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 1200px;
-        margin: auto;
-  
-
-    h5, h4{
-        margin-top: config.$spacing-sm;
-        color: config.$primary-color;
-        
+        .container-fluid{
+            max-width: 1200px;
+            padding: 0;
+            
+            h5, h4{
+                margin-top: config.$spacing-sm;
+                color: config.$primary-color;
+            }
+        }
     }
-
-}
-    
-}
 
 
 
@@ -151,6 +148,7 @@ section {
         border-bottom: 1px solid config.$primary-color;
         display: flex;
         justify-content: center;
+        align-items: center;
         padding: 1.5rem;
         max-width: 1200px;
         margin: auto;
