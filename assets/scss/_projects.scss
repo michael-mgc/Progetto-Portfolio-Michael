@@ -142,18 +142,26 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: center;
+
+    
 }
 
 &__btn{
-    // opacity: 0;
+        background-color: config.$secondary-color;
+        border-radius: 3.40282e38px; 
+        margin: 0.5rem;
+
     cursor: pointer;
-    color: config.set-text-color(config.$primary-color);
+    color: config.set-text-color(config.$secondary-color);
     @include config.transition-ease;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
             &:hover {
-        color: config.set-text-color(config.set-text-color(config.$primary-color));
+                border: 2px solid config.$primary-color;
+        // color: config.set-text-color(config.set-text-color(config.$primary-color));
     }
+
+      
 }
 
 &__body{
