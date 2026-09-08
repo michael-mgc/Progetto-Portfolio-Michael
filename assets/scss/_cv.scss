@@ -14,7 +14,6 @@
 
     width: 100%;
     max-width: 210mm ;
-    height: auto;
     margin: 3rem auto;
     background: white;
     box-shadow: 0 10px 30px rgba(0,0,0,.15);
@@ -28,14 +27,32 @@
         padding: 0;
     }
 
+    .cv__name{
+        h2 {
+        font-size: 1.5rem;
+        font-weight: map.get(config.$font-weights, medium);
+        margin-bottom: config.$spacing-sm;
 
-    h1, h2 {
-        font-size: large;
+    }
+
+    }
+
+
+    h1 {
+        font-size: 2rem;
+        font-weight: map.get(config.$font-weights, bold);
+        margin-bottom: config.$spacing-sm;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: map.get(config.$font-weights, medium);
+        margin-bottom: config.$spacing-sm;
+
     }
     h3 {
         font-size: large;
     }
-    p, span, ul{
+    p, span, ul, li {
         font-size: medium;
     }
 
@@ -78,56 +95,56 @@
 
     html,
     body {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
     header.header {
-        display: none !important;
+        display: none;
     }
 
     .ask,
     footer.footer,
-    .print-cv {
-        display: none !important;
+    .print-cv,
+    #print-cv {
+        display: none;
     }
 
     main {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0 ;
+        padding: 0;
     }
 
       section{
-            border-bottom: none!important;
+            border-bottom: none;
         }
 
     .cv {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
     .cv__container {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
     .cv__curriculum-vitae {
         width: 210mm;
         height: 296mm;
 
-        margin: 0 !important;
-        padding:2rem !important;
+        margin: 0;
+        padding:1.5rem;
 
         box-sizing: border-box;
 
-        border: none!important;
+        border: none;
         box-shadow: none;
 
-        overflow: hidden!important;
       
 
         .cv__other{
-        border-bottom: none!important;
+        border-bottom: none;
          }
 
     // layout destop
@@ -140,13 +157,12 @@
                 width: 50%;
                 h1 {
                     font-size: 2rem;
-                    font-weight: 700;
-                    line-height: 1.1;
-                    margin-bottom: 0.3rem;
+                    font-weight: map.get(config.$font-weights, bold);
+                    line-height: 1.2;
                     }
                 h2 {
                     font-size: 1.8rem;
-                    font-weight: 500;
+                    font-weight: map.get(config.$font-weights, medium);
                     line-height: 1.2;
                 }
 

@@ -47,20 +47,7 @@
 
     button {
         align-self: center;
-        background: config.$secondary-color;
-        color: config.$primary-color;
-        padding: 10px;
-        width: 200px;
-        margin-top: 20px;
-        font-size: 1.5rem;
-        border-radius: 3.40282e38px; 
-        box-sizing: border-box;
-        cursor: pointer;
-        &:hover{
-        background-color: config.$accent-color;
-        @include config.transition-ease;
-       
-            }
+            @include config.button-style;        
     }
 
 }
@@ -82,9 +69,6 @@
 
     }
 
-    .card-body{
-        
-    }
 
     .card-title{
         margin-bottom: 80px;
@@ -94,7 +78,6 @@
         padding: 20px;
         font-size: large;
         display: flex;
-        // justify-content: space-between;
         gap: 20px;
         align-items: center;
         

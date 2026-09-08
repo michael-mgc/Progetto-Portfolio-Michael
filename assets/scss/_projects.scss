@@ -58,11 +58,8 @@
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    // box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-    box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(245, 227, 227, 0.9);
+    box-shadow: 0 8px 20px rgba(211, 211, 211, 0.925);
+   
     border-bottom-left-radius: 5%;          
     border-bottom-right-radius: 5%;
 
@@ -82,11 +79,6 @@
 
         }
 
-        // h3{
-        //     color: config.$secondary-color;
-        //     font-size: x-large;
-        // }
-   
     
 }
 

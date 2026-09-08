@@ -41,8 +41,68 @@
                 }
         }
 
+       body {
+        #home {
+        .home__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
        
+        h1 {
+            order: 2;
+            font-size: 4rem;
 
+
+            }
+
+         h2 {
+            order: 1;
+            font-weight: map.get(config.$font-weights, small);
+            color: config.$accent-color;
+            font-size: 2.5rem;
+            margin-bottom: config.$spacing-sm;
+            }
+
+        p {
+            order: 3;
+            font-size: 1.2rem;
+
+        }
+    }
+        
+
+    }
+
+        h2 {
+            color: config.$secondary-color;
+            font-weight: map.get(config.$font-weights, bold);
+            font-size: 2.5rem;
+            margin-bottom: config.$spacing-md;
+        }
+
+
+h3 {
+    color: config.$secondary-color;
+    font-weight: map.get(config.$font-weights, medium);
+    font-size: 1.5em;
+}
+
+
+p{
+    font-weight: map.get(config.$font-weights, small);
+            font-size: 1.2rem;
+    color: config.$accent-color;
+}
+       }
+
+       .ask{
+
+    h2{
+        color: config.$accent-color;
+        font-size: 1.5rem;
+        font-weight: map.get(config.$font-weights, medium);
+    }
+}
 }
 
 
@@ -51,17 +111,16 @@
         // Header section
 
        .header {
+            &__container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1.5rem;
+            }
 
-       &__container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-        .logo {
+            .logo {
             font-size: 1.75rem;
-        }
+            }
     }
 
 
@@ -184,19 +243,19 @@ h2{
                 width: 50%;
                 h1 {
                     font-size: 2rem;
-                    font-weight: 700;
-                    line-height: 1.1;
-                    margin-bottom: 0.3rem;
+                    font-weight: map.get(config.$font-weights, bold);
+                    line-height: 1.2;
+
                     }
                 h2 {
                     font-size: 1.8rem;
-                    font-weight: 500;
+                    font-weight: map.get(config.$font-weights, medium);
                     line-height: 1.2;
                 }
             }
         }
 
-        h1, h2, h3 {
+        h3 {
         font-size:large;
     }
     
