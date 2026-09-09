@@ -200,13 +200,15 @@
   margin: auto;
   width: 100%;
   max-width: 22rem;
-  height: auto;
+  height: 26rem;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
   box-shadow: 0 8px 20px rgba(211, 211, 211, 0.925);
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .projects__card:hover .projects__img::after {
   top: 0;
@@ -219,7 +221,7 @@
 }
 .projects__img {
   background-color: #000;
-  height: 12rem;
+  height: 60%;
   width: 100%;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
@@ -228,8 +230,7 @@
   overflow: hidden;
 }
 .projects__img img {
-  width: 100%;
-  height: auto;
+  height: 200%;
   object-fit: cover;
   transition: transform 2s ease;
   box-sizing: border-box;
@@ -247,6 +248,11 @@
   background: #000;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+}
+.projects__img .contatoreJs {
+  position: relative;
+  top: -60px;
+  left: -30px;
 }
 .projects__btns {
   position: absolute;
@@ -272,8 +278,9 @@
   border: 2px solid #fff;
 }
 .projects__body {
-  padding: 10px 10px;
-  height: 11rem;
+  padding: 1rem;
+  height: 40%;
+  width: 100%;
 }
 
 #contacts {
@@ -566,10 +573,53 @@
     font-size: 1.2rem;
     color: oklch(44.2% 0.017 285.786deg);
   }
-  .ask h2 {
+  body .ask h2 {
     color: oklch(44.2% 0.017 285.786deg);
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .about__container .items .item img {
+    height: 75px;
+  }
+  .projects__card {
+    max-width: 22rem;
+    height: 30rem;
+  }
+  .projects p {
+    font-size: 1.2rem;
+  }
+  .projects__body {
+    padding: 1rem;
+  }
+  .cv__curriculum-vitae {
+    padding: 1.5rem;
+  }
+  .cv__curriculum-vitae .cv__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .cv__curriculum-vitae .cv__header div {
+    width: 50%;
+  }
+  .cv__curriculum-vitae .cv__header div h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .cv__curriculum-vitae .cv__header div h2 {
     font-size: 1.5rem;
     font-weight: 500;
+    line-height: 1.2;
+  }
+  .cv__curriculum-vitae h3 {
+    font-size: large;
+  }
+  .cv__curriculum-vitae p, .cv__curriculum-vitae span, .cv__curriculum-vitae ul {
+    font-size: large;
+  }
+  .cv__curriculum-vitae .cv__other {
+    border-bottom: none !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -582,9 +632,19 @@
   .header .logo {
     font-size: 1.75rem;
   }
-  body h1 {
-    font-weight: 700;
-    font-size: 5.5rem;
+  body #home .home__container h1 {
+    font-size: 5rem;
+  }
+  body #home .home__container h2 {
+    font-size: 3.5rem;
+  }
+  body #home .home__container p {
+    font-size: 1.5rem;
+  }
+  body p {
+    font-size: 1.5rem;
+    color: oklch(44.2% 0.017 285.786deg);
+    font-weight: 400;
   }
   body h2 {
     font-weight: 700;
@@ -594,12 +654,7 @@
   body h3 {
     font-weight: 400;
     color: oklch(44.2% 0.017 285.786deg);
-    font-size: 2.5rem;
-  }
-  body p {
-    font-size: 1.2rem;
-    color: oklch(44.2% 0.017 285.786deg);
-    font-weight: 400;
+    font-size: 1.5rem;
   }
   .menu-btn {
     display: none;
@@ -630,18 +685,28 @@
   .main-nav .menu-nav__link:hover {
     color: #000;
   }
-  .items {
+  .about__container .items {
     max-width: 800px;
     margin: 5rem auto;
   }
-  .items .item img {
+  .about__container .items .item img {
     height: 5rem;
   }
-  .items .item span {
+  .about__container .items .item span {
     font-size: 1.2rem;
+  }
+  .projects__card {
+    max-width: 22rem;
+    height: 35rem;
+  }
+  .projects h3 {
+    font-size: 2rem;
   }
   .projects p {
     font-size: 1.2rem;
+  }
+  .projects__body {
+    padding: 1rem;
   }
   .cv__curriculum-vitae {
     padding: 1.5rem;

@@ -73,6 +73,7 @@
 
     }
 
+
         h2 {
             color: config.$secondary-color;
             font-weight: map.get(config.$font-weights, bold);
@@ -93,17 +94,92 @@ p{
             font-size: 1.2rem;
     color: config.$accent-color;
 }
-       }
 
-       .ask{
+.ask{
 
     h2{
         color: config.$accent-color;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: map.get(config.$font-weights, medium);
     }
 }
+       }
+
+          .about__container{
+        .items{
+        .item{
+            img{
+                height: 75px;
+            }
+        }
+    }
 }
+
+// Project section responsive 
+
+        .projects {
+
+            &__card{
+                max-width: 22rem;
+                height: 30rem;
+            }
+          
+
+            p{
+                font-size: 1.2rem;
+            }
+
+            &__body{
+                padding: 1rem;
+
+            }
+        }
+ //  Cv.html
+
+        .cv__curriculum-vitae{
+                padding: 1.5rem;
+
+
+
+            .cv__header{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            div{
+                width: 50%;
+                h1 {
+                    font-size: 1.8rem;
+                    font-weight: map.get(config.$font-weights, bold);
+                    line-height: 1.2;
+
+                    }
+                h2 {
+                    font-size: 1.5rem;
+                    font-weight: map.get(config.$font-weights, medium);
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        h3 {
+        font-size:large;
+    }
+    
+    p, span, ul{
+        font-size: large;
+    }
+
+    .cv__other{
+        border-bottom: none!important;
+         }
+        
+    
+    }
+
+       
+}
+
+
 
 
 @include config.media-lg {
@@ -125,10 +201,30 @@ p{
 
 
         body{
-    h1 {
-            font-weight: map.get(config.$font-weights, bold);
-            font-size: 5.5rem;
-}
+
+            #home{
+                .home__container{
+                    h1{
+                    font-size: 5rem;
+                    }
+
+                    h2{
+                        font-size: 3.5rem;
+                    }
+
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            p{
+        font-size: 1.5rem;
+        color: config.$accent-color;
+        font-weight: map.get(config.$font-weights, small);
+
+    }
+    
 h2{
         font-weight: map.get(config.$font-weights, bold);
         color: config.$secondary-color;
@@ -137,17 +233,12 @@ h2{
     h3{
         font-weight: map.get(config.$font-weights, small);
         color: config.$accent-color;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
 
     }
 
 
-    p{
-        font-size: 1.2rem;
-        color: config.$accent-color;
-        font-weight: map.get(config.$font-weights, small);
-
-    }
+    
 }
 
     // menu burger responsive
@@ -191,7 +282,7 @@ h2{
        
 
         // About section responsive
-
+        .about__container{
         .items{
             max-width: 800px;
             margin: 5rem auto;
@@ -207,21 +298,31 @@ h2{
             }
     
 }
+        }
 
 
         
 
+        
         // Project section responsive 
 
         .projects {
-            &__list {
-                // grid-template-columns: repeat(2, 1fr);
-                // max-width: 1200px;
-                // margin-inline: auto;
+
+            &__card{
+                max-width: 22rem;
+                height: 35rem;
+            }
+            h3{
+                font-size: 2rem;
             }
 
             p{
                 font-size: 1.2rem;
+            }
+
+            &__body{
+                padding: 1rem;
+
             }
         }
 
