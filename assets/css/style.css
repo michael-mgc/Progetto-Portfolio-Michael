@@ -200,7 +200,7 @@
   margin: auto;
   width: 100%;
   max-width: 22rem;
-  height: 26rem;
+  height: 27rem;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
   box-shadow: 0 8px 20px rgba(211, 211, 211, 0.925);
@@ -251,8 +251,8 @@
 }
 .projects__img .contatoreJs {
   position: relative;
-  top: -60px;
-  left: -30px;
+  top: -70px;
+  left: -70px;
 }
 .projects__btns {
   position: absolute;
@@ -293,6 +293,12 @@
   justify-content: center;
   text-align: left;
 }
+.contacts__text h1 {
+  color: #000;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 .contacts__form {
   display: flex;
   flex-direction: column;
@@ -310,7 +316,7 @@
   align-self: center;
   box-sizing: border-box;
   padding: 0.5rem 1rem;
-  font-size: 15px;
+  font-size: 16px;
   width: 100%;
 }
 .contacts__form textarea {
@@ -583,13 +589,16 @@
   }
   .projects__card {
     max-width: 22rem;
-    height: 30rem;
+    min-height: 33rem;
   }
   .projects p {
     font-size: 1.2rem;
   }
   .projects__body {
     padding: 1rem;
+    min-height: 40%;
+    height: auto;
+    flex: 1;
   }
   .cv__curriculum-vitae {
     padding: 1.5rem;
@@ -620,6 +629,16 @@
   }
   .cv__curriculum-vitae .cv__other {
     border-bottom: none !important;
+  }
+  .contacts .contacts__text {
+    max-width: 650px;
+    margin: auto;
+  }
+  .contacts .contacts__text h1 {
+    color: #000;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -656,17 +675,17 @@
     color: oklch(44.2% 0.017 285.786deg);
     font-size: 1.5rem;
   }
-  .menu-btn {
+  body .menu-btn {
     display: none;
   }
-  .main-nav {
+  body .main-nav {
     position: static;
     width: auto;
     height: auto;
     visibility: visible;
     transform: none;
   }
-  .main-nav .menu-nav {
+  body .main-nav .menu-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -675,78 +694,91 @@
     background: transparent;
     transform: none;
   }
-  .main-nav .menu-nav__item {
+  body .main-nav .menu-nav__item {
     transform: none;
   }
-  .main-nav .menu-nav__link {
+  body .main-nav .menu-nav__link {
     padding: 1rem;
     color: oklch(44.2% 0.017 285.786deg);
   }
-  .main-nav .menu-nav__link:hover {
+  body .main-nav .menu-nav__link:hover {
     color: #000;
   }
-  .about__container .items {
+  body .about__container .items {
     max-width: 800px;
     margin: 5rem auto;
   }
-  .about__container .items .item img {
+  body .about__container .items .item img {
     height: 5rem;
   }
-  .about__container .items .item span {
+  body .about__container .items .item span {
     font-size: 1.2rem;
   }
-  .projects__card {
+  body .projects__card {
     max-width: 22rem;
-    height: 35rem;
+    min-height: 36rem;
   }
-  .projects h3 {
-    font-size: 2rem;
+  body .projects h3 {
+    font-size: 1.8rem;
+    color: #000;
   }
-  .projects p {
+  body .projects p {
     font-size: 1.2rem;
   }
-  .projects__body {
+  body .projects__body {
     padding: 1rem;
   }
-  .cv__curriculum-vitae {
+  body .cv__curriculum-vitae {
     padding: 1.5rem;
   }
-  .cv__curriculum-vitae .cv__header {
+  body .cv__curriculum-vitae .cv__header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
-  .cv__curriculum-vitae .cv__header div {
+  body .cv__curriculum-vitae .cv__header div {
     width: 50%;
   }
-  .cv__curriculum-vitae .cv__header div h1 {
+  body .cv__curriculum-vitae .cv__header div h1 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
   }
-  .cv__curriculum-vitae .cv__header div h2 {
+  body .cv__curriculum-vitae .cv__header div h2 {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.2;
   }
-  .cv__curriculum-vitae h3 {
+  body .cv__curriculum-vitae h3 {
     font-size: large;
   }
-  .cv__curriculum-vitae p, .cv__curriculum-vitae span, .cv__curriculum-vitae ul {
+  body .cv__curriculum-vitae p, body .cv__curriculum-vitae span, body .cv__curriculum-vitae ul {
     font-size: large;
   }
-  .cv__curriculum-vitae .cv__other {
+  body .cv__curriculum-vitae .cv__other {
     border-bottom: none !important;
   }
-  .contacts .contacts__text {
+  body .contacts .contacts__text {
     max-width: 650px;
     margin: auto;
   }
-  .contacts__list {
+  body .contacts .contacts__text h1 {
+    color: #000;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  body .contacts input, body .contacts textarea {
+    font-size: 2rem;
+  }
+  body .contacts textarea {
+    min-height: 250px;
+  }
+  body .contacts__list {
     padding: 5rem 0;
   }
-  .contacts__list h4 {
-    font-weight: 700;
+  body .contacts__list .list-group a {
+    font-weight: 500;
     color: oklch(44.2% 0.017 285.786deg);
     font-size: 1.5rem;
   }
@@ -767,54 +799,29 @@
     font-size: 3.5rem;
   }
   body p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: oklch(44.2% 0.017 285.786deg);
     font-weight: 400;
+  }
+  .projects__container {
+    max-width: 1200px;
+  }
+  .projects__list {
+    max-width: 1400px;
   }
   .ask .ask__container h3 {
     font-size: 3.5rem;
   }
-  .contacts__form input, .contacts__form textarea {
-    font-size: 2rem;
-  }
-  .contacts__form textarea {
-    min-height: 250px;
-  }
-  .contacts .contacts__text {
-    max-width: 650px;
-    margin: auto;
-  }
-  .contacts__list {
-    padding: 5rem 0;
-  }
-  .contacts__list h4 {
-    font-weight: 700;
-    color: oklch(44.2% 0.017 285.786deg);
-    font-size: 1.5rem;
-  }
-  .contacts__list .contacts__social {
-    font-size: 4rem;
-  }
-  .footer__container .social-icons {
-    border-bottom: 1px solid #fff;
-    font-size: 3.2rem;
-    max-width: 1200px;
-  }
-  .footer__container h5, .footer__container h4 {
-    font-size: 1.5rem;
+  #contacts h1 {
+    font-size: 3.5rem;
   }
   .social-icons {
-    font-size: 3rem !important;
     border-bottom: 1px solid #fff;
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem;
+    font-size: 5rem;
+    max-width: 1200px;
   }
-  .social-icons a {
-    color: inherit;
-  }
-  .social-icons i {
-    font-size: 2rem;
+  #footer h5, #footer h4 {
+    font-size: 1.5rem;
   }
 }
 body {
@@ -827,7 +834,7 @@ body {
 h1, h2 {
   color: #000;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -930,6 +937,7 @@ section {
 .footer .container-fluid h5, .footer .container-fluid h4 {
   margin-top: 1rem;
   color: #fff;
+  font-size: 1.2rem;
 }
 
 .social-icons {

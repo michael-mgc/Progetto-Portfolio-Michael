@@ -24,7 +24,7 @@ body{
 h1, h2 {
     color: config.$secondary-color;
     font-weight: map.get(config.$font-weights, bold);
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: config.$spacing-md;
 }
 
@@ -135,6 +135,7 @@ section {
             h5, h4{
                 margin-top: config.$spacing-sm;
                 color: config.$primary-color;
+                font-size: 1.2rem;
             }
         }
     }

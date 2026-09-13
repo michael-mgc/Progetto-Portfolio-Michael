@@ -12,7 +12,14 @@
             justify-content: center;
             text-align: left;
 
-
+            &__text{
+            h1 {
+                color: config.$secondary-color;
+                font-weight: map.get(config.$font-weights, bold);
+                font-size: 2rem;
+                margin-bottom: config.$spacing-md;
+            }
+        }
 &__form{
        display: flex;
         flex-direction: column;
@@ -35,7 +42,7 @@
         align-self: center;
         box-sizing: border-box;
         padding: 0.5rem 1rem;
-        font-size: 15px;
+        font-size: 16px;
         width: 100%;
     }
 
