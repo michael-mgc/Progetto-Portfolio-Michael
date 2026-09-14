@@ -371,26 +371,6 @@
   filter: brightness(0);
 }
 
-.cv .print-cv {
-  display: inline-block;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  padding: 10px;
-  width: 200px;
-  margin-top: 20px;
-  font-size: 1.5rem;
-  border-radius: 9999px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.cv .print-cv:hover {
-  background-color: oklch(44.2% 0.017 285.786deg);
-  transition: all 0.5s ease-in-out;
-}
-.cv .print-cv {
-  margin-top: 0;
-}
 .cv__curriculum-vitae {
   width: 100%;
   max-width: 210mm;
@@ -406,8 +386,13 @@
   border-bottom: none;
   padding: 0;
 }
+.cv__curriculum-vitae .cv__name h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 .cv__curriculum-vitae .cv__name h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }

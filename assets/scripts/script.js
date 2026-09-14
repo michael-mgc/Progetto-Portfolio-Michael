@@ -1,14 +1,4 @@
 
-// Download PDF
-
-const printBtn = document.querySelector("#print-cv");
-
-if (printBtn) {
-printBtn.addEventListener("click", () => {
-    window.print();
-})
-}
-
 // Form handling 
 
 emailjs.init({
